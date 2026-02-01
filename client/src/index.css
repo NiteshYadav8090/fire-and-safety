@@ -327,3 +327,7 @@
     inset: -1px;
   }
 }
+
+.gradient-red-blue {
+    background: linear-gradient(135deg, #b91c1c 0%, #1e3a8a 100%);
+}
