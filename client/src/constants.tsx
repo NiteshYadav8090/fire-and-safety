@@ -10,7 +10,7 @@ export const SERVICES: Service[] = [
     longDescription: 'We provide state-of-the-art fire extinguishers tailored for homes, offices, and heavy industrial environments. Our products comply with BIS and international standards including ISI markings.',
     benefits: ['Quick deployment', 'Low maintenance', 'High pressure reliability'],
     industries: ['Residential', 'Retail', 'Corporate Offices'],
-    image: 'https://images.unsplash.com/photo-1610484157147-380d9c849176?auto=format&fit=crop&q=80&w=800'
+    image: '/images/services/extinguishers.png'
   },
   {
     id: 'alarms',
@@ -20,7 +20,7 @@ export const SERVICES: Service[] = [
     longDescription: 'Intelligent addressable and conventional fire alarm systems that detect danger before it escalates. Integrated with remote monitoring and emergency notification capabilities.',
     benefits: ['Early warning', 'Zonal pinpointing', 'Emergency alerts'],
     industries: ['Hospitals', 'Hotels', 'Warehouses'],
-    image: 'https://images.unsplash.com/photo-1599708141690-d81b3021975e?auto=format&fit=crop&q=80&w=800'
+    image: '/images/services/alarms.png'
   },
   {
     id: 'hydrants',
@@ -30,7 +30,7 @@ export const SERVICES: Service[] = [
     longDescription: 'Design, installation, and commissioning of external hydrant systems and internal wet-riser systems with high-capacity fire pumps and piping networks.',
     benefits: ['Massive water volume', 'Auto-start pumps', 'Long range protection'],
     industries: ['Factories', 'Malls', 'High-rise Buildings'],
-    image: 'https://images.unsplash.com/photo-1542037104857-ffbb0b9155fb?auto=format&fit=crop&q=80&w=800'
+    image: '/images/services/hydrants.png'
   },
   {
     id: 'amc',
@@ -40,7 +40,7 @@ export const SERVICES: Service[] = [
     longDescription: 'Ensure your safety equipment works when needed. Our AMC covers testing of detectors, refilling extinguishers, and pressure testing hydrants to meet government audits.',
     benefits: ['Compliance peace of mind', 'Equipment longevity', '24/7 Support'],
     industries: ['Schools', 'Societies', 'Banks'],
-    image: 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&q=80&w=800'
+    image: '/images/services/amc.png'
   },
   {
     id: 'training',
@@ -50,7 +50,7 @@ export const SERVICES: Service[] = [
     longDescription: 'Equipment is useless without trained users. We provide hands-on training for fire fighting, evacuation protocols, and first aid specifically for industrial workers.',
     benefits: ['Confidence in crisis', 'Reduced liability', 'SOP awareness'],
     industries: ['All Corporate', 'Manufacturing', 'Logistics'],
-    image: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&q=80&w=800'
+    image: '/images/services/training.png'
   },
   {
     id: 'noc',
@@ -60,7 +60,7 @@ export const SERVICES: Service[] = [
     longDescription: 'Expert guidance for obtaining Fire NOC from the department. We conduct detailed audits to ensure your building meets the latest local fire codes and National Building Codes.',
     benefits: ['Legal compliance', 'Safety certification', 'Risk assessment'],
     industries: ['New Construction', 'Commercial Complex'],
-    image: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&q=80&w=800'
+    image: '/images/services/noc.png'
   }
 ];
 
