@@ -65,19 +65,19 @@ export const SERVICES: Service[] = [
 ];
 
 export const PROJECTS: Project[] = [
-  { id: 1, title: 'Industrial Complex Alpha', location: 'Ahmedabad', industry: 'Manufacturing', image: 'https://images.unsplash.com/photo-1565008447742-97f6f38c985c?auto=format&fit=crop&q=80&w=800' },
-  { id: 2, title: 'Skyline Mall', location: 'Mumbai', industry: 'Retail', image: 'https://images.unsplash.com/photo-1567449300518-034888b8a9a2?auto=format&fit=crop&q=80&w=800' },
-  { id: 3, title: 'Unity Multi-Speciality Hospital', location: 'Pune', industry: 'Healthcare', image: 'https://images.unsplash.com/photo-1586773860418-d3b97978c65c?auto=format&fit=crop&q=80&w=800' },
-  { id: 4, title: 'Global Tech Park', location: 'Bangalore', industry: 'IT/Corporate', image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=800' },
+  { id: 1, title: 'Industrial Complex Alpha', location: 'Ahmedabad', industry: 'Manufacturing', image: '/images/projects/project-1.png' },
+  { id: 2, title: 'Skyline Mall', location: 'Mumbai', industry: 'Retail', image: '/images/projects/project-2.png' },
+  { id: 3, title: 'Unity Multi-Speciality Hospital', location: 'Pune', industry: 'Healthcare', image: '/images/projects/project-3.png' },
+  { id: 4, title: 'Global Tech Park', location: 'Bangalore', industry: 'IT/Corporate', image: '/images/projects/project-4.png' },
 ];
 
 export const GALLERY = [
-  { id: 1, type: 'Installation', image: 'https://images.unsplash.com/photo-1516216628859-9bccecad13ec?auto=format&fit=crop&q=80&w=800' },
-  { id: 2, type: 'Training', image: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&q=80&w=800' },
-  { id: 3, type: 'Equipment', image: 'https://images.unsplash.com/photo-1613243555988-441166d4d6fd?auto=format&fit=crop&q=80&w=800' },
-  { id: 4, type: 'Audit', image: 'https://images.unsplash.com/photo-1541888946425-d81bb19480c5?auto=format&fit=crop&q=80&w=800' },
-  { id: 5, type: 'Training', image: 'https://images.unsplash.com/photo-1590233648133-3e339646d141?auto=format&fit=crop&q=80&w=800' },
-  { id: 6, type: 'Installation', image: 'https://images.unsplash.com/photo-1517554558297-963fd77651a2?auto=format&fit=crop&q=80&w=800' },
+  { id: 1, type: 'Installation', image: '/images/gallery/installation-1.png' },
+  { id: 2, type: 'Training', image: '/images/gallery/training-1.png' },
+  { id: 3, type: 'Equipment', image: '/images/gallery/equipment-1.png' },
+  { id: 4, type: 'Audit', image: '/images/gallery/audit-1.png' },
+  { id: 5, type: 'Training', image: '/images/gallery/training-2.png' },
+  { id: 6, type: 'Installation', image: '/images/gallery/installation-2.png' },
 ];
 
 export const BLOG_POSTS = [
