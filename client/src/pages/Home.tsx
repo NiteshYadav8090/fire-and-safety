@@ -47,9 +47,9 @@ const Home = ({ setActivePage }: { setActivePage: (p: string) => void }) => {
                   Free Safety Audit
                 </button>
                 <img 
-                  src="https://lh3.googleusercontent.com/p/AF1QipPIy8ueAKET2L2nQZ81XiB9kjmflF-LJB1zbvqr=w1000-h1200-k-no"
+                  src="https://lh3.googleusercontent.com/p/AF1QipPIy8ueAKET2L2nQZ81XiB9kjmflF-LJB1zbvqr=s1000"
                   alt="Audit Location"
-                  className="absolute -top-48 left-0 w-48 h-64 object-cover rounded-xl shadow-2xl opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"
+                  className="absolute -top-64 left-0 w-64 h-80 object-cover rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.5)] opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none border-2 border-white/20 z-50 scale-95 group-hover:scale-100"
                 />
               </div>
             </div>
