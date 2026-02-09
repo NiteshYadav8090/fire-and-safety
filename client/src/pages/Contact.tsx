@@ -70,6 +70,10 @@ const ContactPage = () => {
                   </div>
                 </div>
                 <div className="space-y-2">
+                  <label className="text-xs font-black text-blue-900 uppercase tracking-widest">Site Address</label>
+                  <input required type="text" className="w-full bg-gray-50 border-2 border-transparent focus:border-red-600 focus:bg-white p-5 rounded-2xl outline-none transition-all text-lg font-bold text-blue-900" placeholder="Full address of the facility" />
+                </div>
+                <div className="space-y-2">
                   <label className="text-xs font-black text-blue-900 uppercase tracking-widest">Site Requirements</label>
                   <textarea rows={4} className="w-full bg-gray-50 border-2 border-transparent focus:border-red-600 focus:bg-white p-5 rounded-2xl outline-none transition-all text-lg font-bold text-blue-900" placeholder="Tell us about your facility..."></textarea>
                 </div>
