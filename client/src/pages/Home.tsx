@@ -128,9 +128,9 @@ const Home = ({ setActivePage }: { setActivePage: (p: string) => void }) => {
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4 lg:px-8 text-center">
           <SectionTitle title="Trusted by Global Enterprises" subtitle="We are proud partners with industry leaders across various sectors." />
-          <div className="flex flex-wrap justify-center items-center gap-12 lg:gap-24 grayscale opacity-40 hover:grayscale-0 hover:opacity-100 transition-all duration-700">
+          <div className="flex flex-wrap justify-center items-center gap-16 lg:gap-32 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-700">
             {CLIENTS.map(c => (
-              <img key={c.name} src={c.logo} alt={c.name} className="h-12 md:h-16 w-auto object-contain" />
+              <img key={c.name} src={c.logo} alt={c.name} className="h-20 md:h-28 w-auto object-contain" />
             ))}
           </div>
         </div>

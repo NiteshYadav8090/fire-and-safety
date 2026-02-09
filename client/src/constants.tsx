@@ -81,9 +81,27 @@ export const GALLERY = [
 ];
 
 export const BLOG_POSTS = [
-  { id: 1, title: '5 Fire Safety Tips for Office Buildings', date: 'Oct 12, 2023', excerpt: 'Learn how to keep your workspace safe and evacuation-ready...' },
-  { id: 2, title: 'Choosing the Right Fire Extinguisher', date: 'Sept 28, 2023', excerpt: 'Not all fires are the same. Understand the difference between CO2 and DCP...' },
-  { id: 3, title: 'Why Annual Maintenance is Crucial', date: 'Aug 15, 2023', excerpt: 'Don\'t wait for an emergency to find out your pumps are not working...' },
+  { 
+    id: 1, 
+    title: '5 Fire Safety Tips for Office Buildings', 
+    date: 'Oct 12, 2023', 
+    excerpt: 'Learn how to keep your workspace safe and evacuation-ready...',
+    image: '/images/blog/office-safety.png'
+  },
+  { 
+    id: 2, 
+    title: 'Choosing the Right Fire Extinguisher', 
+    date: 'Sept 28, 2023', 
+    excerpt: 'Not all fires are the same. Understand the difference between CO2 and DCP...',
+    image: '/images/blog/extinguisher-guide.png'
+  },
+  { 
+    id: 3, 
+    title: 'Why Annual Maintenance is Crucial', 
+    date: 'Aug 15, 2023', 
+    excerpt: 'Don\'t wait for an emergency to find out your pumps are not working...',
+    image: '/images/blog/maintenance.png'
+  },
 ];
 
 export const CERTIFICATIONS: Certification[] = [

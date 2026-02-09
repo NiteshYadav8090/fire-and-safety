@@ -12,7 +12,7 @@ const BlogSection = () => (
         {BLOG_POSTS.map(post => (
           <div key={post.id} className="bg-white rounded-[2rem] overflow-hidden shadow-lg border border-gray-100 hover:-translate-y-2 transition-transform duration-300">
             <div className="h-48 bg-gray-200 overflow-hidden">
-               <img src={`https://images.unsplash.com/photo-1599708141690-d81b3021975e?auto=format&fit=crop&q=80&w=600&sig=${post.id}`} alt={post.title} className="w-full h-full object-cover" />
+               <img src={post.image} alt={post.title} className="w-full h-full object-cover" />
             </div>
             <div className="p-8">
               <div className="flex items-center text-sm text-gray-400 mb-4 font-bold">
