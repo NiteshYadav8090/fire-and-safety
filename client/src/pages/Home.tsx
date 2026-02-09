@@ -47,9 +47,9 @@ const Home = ({ setActivePage }: { setActivePage: (p: string) => void }) => {
                   Free Safety Audit
                 </button>
                 <img 
-                  src="https://lh3.googleusercontent.com/p/AF1QipPIy8ueAKET2L2nQZ81XiB9kjmflF-LJB1zbvqr=w203-h272-k-no"
+                  src="https://lh3.googleusercontent.com/p/AF1QipPIy8ueAKET2L2nQZ81XiB9kjmflF-LJB1zbvqr=w1000-h1200-k-no"
                   alt="Audit Location"
-                  className="absolute -top-32 left-0 w-32 h-40 object-cover rounded-xl shadow-2xl opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"
+                  className="absolute -top-48 left-0 w-48 h-64 object-cover rounded-xl shadow-2xl opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"
                 />
               </div>
             </div>
@@ -71,7 +71,7 @@ const Home = ({ setActivePage }: { setActivePage: (p: string) => void }) => {
             {[
               { label: 'Years Experience', val: '12+', icon: Calendar },
               { label: 'Success Projects', val: '650+', icon: CheckCircle },
-              { label: 'Safety Experts', val: '45+', icon: Users },
+              { label: 'Safety Experts', val: '3+', icon: Users },
               { label: 'Approvals', val: 'Grade-A', icon: Award },
             ].map((stat, i) => (
               <div key={i} className="flex flex-col items-center text-center group">
