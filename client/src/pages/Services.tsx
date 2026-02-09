@@ -3,6 +3,7 @@ import React from 'react';
 import { Flame, Bell, Droplets, Settings, GraduationCap, FileCheck, Award, CheckCircle, ChevronRight, Info } from 'lucide-react';
 import SectionTitle from '@/components/SectionTitle';
 import { SERVICES } from '@/constants';
+import fireFightingImg from "@assets/image_1770636296505.png"
 
 const Services = ({ setActivePage }: { setActivePage: (p: string) => void }) => {
   const handleLinkClick = (id: string) => {
@@ -13,6 +14,12 @@ const Services = ({ setActivePage }: { setActivePage: (p: string) => void }) => 
   return (
     <section className="py-32 bg-gray-50">
       <div className="container mx-auto px-4">
+        <div className="mb-16 rounded-[3rem] overflow-hidden shadow-2xl h-[500px] relative">
+          <img src={fireFightingImg} alt="Fire Safety in Action" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-12">
+            <h2 className="text-4xl font-black text-white">Advanced Fire Fighting Technology</h2>
+          </div>
+        </div>
         <SectionTitle title="Industrial Grade Services" subtitle="Specialized solutions for every critical infrastructure." />
         <div className="grid grid-cols-1 gap-16">
           {SERVICES.map((s, idx) => (

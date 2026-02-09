@@ -39,12 +39,19 @@ const Home = ({ setActivePage }: { setActivePage: (p: string) => void }) => {
               >
                 Explore Services <ArrowRight className="ml-3 w-6 h-6" />
               </button>
-              <button 
-                onClick={() => { setActivePage('contact'); window.scrollTo(0,0); }}
-                className="bg-white/10 backdrop-blur-md border-2 border-white/20 hover:bg-white/20 text-white px-10 py-4 rounded-2xl font-black text-xl shadow-2xl transition-all transform hover:-translate-y-2"
-              >
-                Free Safety Audit
-              </button>
+              <div className="relative group">
+                <button 
+                  onClick={() => { setActivePage('contact'); window.scrollTo(0,0); }}
+                  className="bg-white/10 backdrop-blur-md border-2 border-white/20 hover:bg-white/20 text-white px-10 py-4 rounded-2xl font-black text-xl shadow-2xl transition-all transform hover:-translate-y-2 w-full h-full"
+                >
+                  Free Safety Audit
+                </button>
+                <img 
+                  src="https://lh3.googleusercontent.com/p/AF1QipPIy8ueAKET2L2nQZ81XiB9kjmflF-LJB1zbvqr=w203-h272-k-no"
+                  alt="Audit Location"
+                  className="absolute -top-32 left-0 w-32 h-40 object-cover rounded-xl shadow-2xl opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"
+                />
+              </div>
             </div>
           </div>
         </div>
