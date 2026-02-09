@@ -11,7 +11,7 @@ const Home = ({ setActivePage }: { setActivePage: (p: string) => void }) => {
       <section className="relative h-screen flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
-            src="/images/home/hero-bg.png" 
+            src="https://lh3.googleusercontent.com/p/AF1QipO9i0GTNB6BzKrrIcXmEZANGWVpWhJYOWgS6cPj=s1000" 
             className="w-full h-full object-cover" 
             alt="Fire Safety Hero" 
           />

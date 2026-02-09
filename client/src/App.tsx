@@ -93,7 +93,7 @@ export default function App() {
               </div>
               <div className="lg:w-1/2 relative">
                 <div className="bg-red-600 w-full h-full absolute top-8 left-8 rounded-[3rem] -z-10"></div>
-                <img src="/images/about/team.png" alt="Our Team" className="rounded-[3rem] shadow-2xl" />
+                <img src="https://lh3.googleusercontent.com/p/AF1QipO9i0GTNB6BzKrrIcXmEZANGWVpWhJYOWgS6cPj=s1000" alt="Our Team" className="rounded-[3rem] shadow-2xl" />
                 <div className="absolute -bottom-10 -left-10 bg-white p-10 rounded-3xl shadow-2xl border border-gray-100">
                   <p className="text-6xl font-black text-red-600">12+</p>
                   <p className="font-bold text-blue-900 uppercase tracking-widest">Years of Trust</p>
