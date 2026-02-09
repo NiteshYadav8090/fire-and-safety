@@ -93,19 +93,19 @@ export const CERTIFICATIONS: Certification[] = [
 ];
 
 export const CLIENTS: Client[] = [
-  { name: 'Tata Steel', logo: 'https://logo.clearbit.com/tata.com' },
-  { name: 'Reliance Ind.', logo: 'https://logo.clearbit.com/ril.com' },
-  { name: 'L&T Construction', logo: 'https://logo.clearbit.com/larsentoubro.com' },
-  { name: 'Adani Group', logo: 'https://logo.clearbit.com/adani.com' },
+  { name: 'Tata Steel', logo: '/images/clients/tata-steel.png' },
+  { name: 'Reliance Ind.', logo: '/images/clients/reliance.png' },
+  { name: 'L&T Construction', logo: '/images/clients/l-and-t.png' },
+  { name: 'Adani Group', logo: '/images/clients/adani.png' },
 ];
 
 export const CONTACT_INFO = {
-  phone: '+91 98765 43210',
-  whatsapp: '919876543210',
-  email: 'contact@zedkingfireandsafety.com',
-  address: '404 Fire Safety Plaza, Industrial Area Phase II, Mumbai - 400013',
+  phone: '+91 94161 11612',
+  whatsapp: '919416111612',
+  email: 'zedkingsurvice@gmail.com',
+  address: 'Karnal Rd, near New Bus Stand, Friends Colony, Kaithal, Haryana 136027',
   workingHours: 'Mon - Sat, 9:00 AM - 7:00 PM',
-  emergency: '1800-ZED-KING'
+  emergency: '+91 94161 11612'
 };
 
 export const FAQ = [
