@@ -79,9 +79,6 @@ export const GALLERY = [
   { id: 5, type: 'Training', image: 'attached_assets/image_1770821540271.png' },
   { id: 6, type: 'Training', image: 'attached_assets/image_1770821550360.png' },
   { id: 7, type: 'Training', image: 'attached_assets/image_1770821563664.png' },
-  { id: 8, type: 'Installation', image: '/images/gallery/installation-1.png' },
-  { id: 9, type: 'Equipment', image: '/images/gallery/equipment-1.png' },
-  { id: 10, type: 'Audit', image: '/images/gallery/audit-1.png' },
 ];
 
 export const BLOG_POSTS = [
