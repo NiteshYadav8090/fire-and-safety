@@ -72,12 +72,16 @@ export const PROJECTS: Project[] = [
 ];
 
 export const GALLERY = [
-  { id: 1, type: 'Installation', image: '/images/gallery/installation-1.png' },
-  { id: 2, type: 'Training', image: '/images/gallery/training-1.png' },
-  { id: 3, type: 'Equipment', image: '/images/gallery/equipment-1.png' },
-  { id: 4, type: 'Audit', image: '/images/gallery/audit-1.png' },
-  { id: 5, type: 'Training', image: '/images/gallery/training-2.png' },
-  { id: 6, type: 'Installation', image: '/images/gallery/installation-2.png' },
+  { id: 1, type: 'Training', image: 'attached_assets/image_1770819580557.png' },
+  { id: 2, type: 'Training', image: 'attached_assets/image_1770819589624.png' },
+  { id: 3, type: 'Training', image: 'attached_assets/image_1770819598496.png' },
+  { id: 4, type: 'Training', image: 'attached_assets/image_1770819652686.png' },
+  { id: 5, type: 'Training', image: 'attached_assets/image_1770821540271.png' },
+  { id: 6, type: 'Training', image: 'attached_assets/image_1770821550360.png' },
+  { id: 7, type: 'Training', image: 'attached_assets/image_1770821563664.png' },
+  { id: 8, type: 'Installation', image: '/images/gallery/installation-1.png' },
+  { id: 9, type: 'Equipment', image: '/images/gallery/equipment-1.png' },
+  { id: 10, type: 'Audit', image: '/images/gallery/audit-1.png' },
 ];
 
 export const BLOG_POSTS = [
