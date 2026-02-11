@@ -4,6 +4,8 @@ import { ArrowRight, Calendar, CheckCircle, Users, Award, Flame, Bell, Droplets,
 import { SERVICES, CLIENTS, CONTACT_INFO } from '@/constants';
 import SectionTitle from '@/components/SectionTitle';
 
+import heroBg from "@assets/image_1770818995026.png";
+
 const Home = ({ setActivePage }: { setActivePage: (p: string) => void }) => {
   return (
     <div>
@@ -11,7 +13,7 @@ const Home = ({ setActivePage }: { setActivePage: (p: string) => void }) => {
       <section className="relative h-screen flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://lh3.googleusercontent.com/p/AF1QipO9i0GTNB6BzKrrIcXmEZANGWVpWhJYOWgS6cPj=s1000" 
+            src={heroBg} 
             className="w-full h-full object-cover" 
             alt="Fire Safety Hero" 
           />
