@@ -71,14 +71,22 @@ export const PROJECTS: Project[] = [
   { id: 4, title: 'Global Tech Park', location: 'Bangalore', industry: 'IT/Corporate', image: '/images/projects/project-4.png' },
 ];
 
+import training1 from "@assets/image_1770819580557.png";
+import training2 from "@assets/image_1770819589624.png";
+import training3 from "@assets/image_1770819598496.png";
+import training4 from "@assets/image_1770819652686.png";
+import training5 from "@assets/image_1770821540271.png";
+import training6 from "@assets/image_1770821550360.png";
+import training7 from "@assets/image_1770821563664.png";
+
 export const GALLERY = [
-  { id: 1, type: 'Training', image: 'attached_assets/image_1770819580557.png' },
-  { id: 2, type: 'Training', image: 'attached_assets/image_1770819589624.png' },
-  { id: 3, type: 'Training', image: 'attached_assets/image_1770819598496.png' },
-  { id: 4, type: 'Training', image: 'attached_assets/image_1770819652686.png' },
-  { id: 5, type: 'Training', image: 'attached_assets/image_1770821540271.png' },
-  { id: 6, type: 'Training', image: 'attached_assets/image_1770821550360.png' },
-  { id: 7, type: 'Training', image: 'attached_assets/image_1770821563664.png' },
+  { id: 1, type: 'Training', image: training1 },
+  { id: 2, type: 'Training', image: training2 },
+  { id: 3, type: 'Training', image: training3 },
+  { id: 4, type: 'Training', image: training4 },
+  { id: 5, type: 'Training', image: training5 },
+  { id: 6, type: 'Training', image: training6 },
+  { id: 7, type: 'Training', image: training7 },
 ];
 
 export const BLOG_POSTS = [
