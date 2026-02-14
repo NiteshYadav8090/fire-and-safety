@@ -10,7 +10,7 @@ import BlogSection from './components/BlogSection';
 import SectionTitle from './components/SectionTitle';
 import FAQItem from './components/FAQItem';
 import { PROJECTS, CERTIFICATIONS, FAQ, CONTACT_INFO } from './constants';
-import { MessageCircle, Phone, MapPin } from 'lucide-react';
+import { MessageCircle, Phone, MapPin, Award, Users, CheckCircle, Settings, FileCheck, PhoneCall } from 'lucide-react';
 
 export default function App() {
   const [activePage, setActivePage] = useState('home');
