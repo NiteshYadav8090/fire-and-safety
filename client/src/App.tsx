@@ -58,93 +58,97 @@ export default function App() {
         </div>
       );
       case 'about': return (
-        <section className="py-32 bg-white overflow-hidden">
-          <div className="container mx-auto px-4 lg:px-8">
-            {/* Mission & Vision Section */}
-            <div className="flex flex-col lg:flex-row gap-20 items-center mb-32">
-              <div className="lg:w-1/2 space-y-10">
-                <div className="inline-flex items-center gap-4 bg-red-50 px-6 py-3 rounded-2xl border border-red-100">
-                  <span className="w-3 h-3 bg-red-600 rounded-full animate-pulse"></span>
-                  <span className="text-red-600 font-black tracking-widest uppercase text-sm">Established Since 2012</span>
+        <section className="py-20 bg-white overflow-hidden">
+          <div className="container mx-auto px-4 lg:px-8 max-w-7xl">
+            {/* Header / Intro Section */}
+            <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-center mb-24">
+              <div className="lg:w-1/2 space-y-8 text-center lg:text-left">
+                <div className="inline-flex items-center gap-3 bg-red-50 px-4 py-2 rounded-xl border border-red-100">
+                  <span className="w-2 h-2 bg-red-600 rounded-full animate-pulse"></span>
+                  <span className="text-red-600 font-bold tracking-widest uppercase text-xs">Since 2012</span>
                 </div>
-                <h2 className="text-5xl md:text-7xl font-black text-blue-900 leading-[1.1] tracking-tight">
-                  Protecting What <span className="text-red-600 underline decoration-red-600/20 underline-offset-8">Matters Most.</span>
+                <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-blue-900 leading-[1.1] tracking-tight">
+                  The Gold Standard in <br />
+                  <span className="text-red-600">Fire & Safety.</span>
                 </h2>
-                <p className="text-2xl text-gray-600 leading-relaxed font-medium">
-                  At Zed-King Fire and Safety, we don't just supply equipment—we engineer peace of mind. With over a decade of expertise, we've become the trusted partner for complex industrial and residential safety systems.
+                <p className="text-lg md:text-xl text-gray-600 leading-relaxed font-medium">
+                  With over 12 years of experience, Zed-King Fire and Safety has been at the forefront of protecting industrial assets and residential communities. We combine engineering excellence with a passion for human safety.
                 </p>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 py-10 border-y border-gray-100">
-                  <div className="space-y-4">
-                    <div className="w-12 h-12 bg-blue-900 rounded-xl flex items-center justify-center text-white shadow-lg shadow-blue-900/20">
-                      <Award className="w-6 h-6" />
-                    </div>
-                    <h4 className="text-blue-900 font-black text-2xl">Our Vision</h4>
-                    <p className="text-gray-500 leading-relaxed font-medium">To lead India's fire safety revolution through smart technology and zero-compromise engineering standards.</p>
-                  </div>
-                  <div className="space-y-4">
-                    <div className="w-12 h-12 bg-red-600 rounded-xl flex items-center justify-center text-white shadow-lg shadow-red-600/20">
-                      <Users className="w-6 h-6" />
-                    </div>
-                    <h4 className="text-blue-900 font-black text-2xl">Our Mission</h4>
-                    <p className="text-gray-500 leading-relaxed font-medium">Delivering end-to-end lifecycle safety management—from government NOC approvals to high-intensity training sessions.</p>
-                  </div>
+                <div className="flex flex-wrap justify-center lg:justify-start gap-10 py-8 border-y border-gray-100">
+                   {[
+                     { label: 'Projects Done', val: '650+' },
+                     { label: 'Safety Experts', val: '3+' },
+                     { label: 'Years Experience', val: '12+' }
+                   ].map((stat, i) => (
+                     <div key={i} className="text-center lg:text-left">
+                       <p className="text-3xl font-black text-blue-900">{stat.val}</p>
+                       <p className="text-xs font-bold text-gray-400 uppercase tracking-widest">{stat.label}</p>
+                     </div>
+                   ))}
                 </div>
               </div>
-              <div className="lg:w-1/2 relative group">
-                <div className="absolute -inset-4 bg-red-600/5 rounded-[4rem] blur-3xl group-hover:bg-red-600/10 transition-colors"></div>
-                <div className="relative">
-                  <div className="absolute -top-10 -right-10 bg-red-600 text-white p-8 rounded-3xl shadow-2xl z-20 transform hover:scale-110 transition-transform">
-                    <p className="text-5xl font-black">12+</p>
-                    <p className="font-bold text-xs uppercase tracking-widest opacity-80">Years of Trust</p>
-                  </div>
-                  <img 
-                    src="https://lh3.googleusercontent.com/p/AF1QipPIy8ueAKET2L2nQZ81XiB9kjmflF-LJB1zbvqr=s1000" 
-                    alt="Headquarters" 
-                    className="rounded-[3rem] shadow-[0_50px_100px_rgba(0,0,0,0.15)] relative z-10 w-full object-cover h-[600px] border-8 border-white group-hover:rotate-1 transition-transform duration-700" 
-                  />
-                  <div className="absolute -bottom-10 -left-10 bg-white p-10 rounded-[2.5rem] shadow-2xl border border-gray-100 z-20 flex items-center gap-6">
-                    <div className="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center">
-                      <CheckCircle className="w-8 h-8 text-blue-900" />
-                    </div>
-                    <div>
-                      <p className="text-3xl font-black text-blue-900">650+</p>
-                      <p className="font-bold text-gray-400 uppercase text-xs tracking-widest">Projects Completed</p>
-                    </div>
-                  </div>
-                </div>
+              <div className="lg:w-1/2 relative">
+                <img 
+                  src="https://lh3.googleusercontent.com/p/AF1QipPIy8ueAKET2L2nQZ81XiB9kjmflF-LJB1zbvqr=s1000" 
+                  alt="Our Main Facility" 
+                  className="rounded-[2rem] shadow-2xl w-full object-cover h-[400px] md:h-[500px] border-4 border-white" 
+                />
               </div>
             </div>
 
-            {/* Values Section */}
-            <div className="py-24 bg-gray-50 rounded-[4rem] px-8 lg:px-20 mb-32">
-              <SectionTitle title="The Zed-King Standard" subtitle="Our core pillars that define every project we undertake." />
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mt-16">
+            {/* Our Story Section */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-32 py-16 bg-gray-50 rounded-[3rem] px-8 lg:px-16">
+              <div className="space-y-6">
+                <h3 className="text-3xl font-black text-blue-900">Our Story</h3>
+                <p className="text-gray-600 text-lg leading-relaxed font-medium">
+                  Our journey began in 2012 with a single mission: to provide uncompromising safety solutions to a rapidly industrializing region. Starting with simple extinguisher supplies, we've evolved into a complete fire engineering consultancy.
+                </p>
+                <p className="text-gray-600 text-lg leading-relaxed font-medium">
+                  Today, we handle complex multi-site projects, ensuring everything from advanced detection systems to high-pressure hydrants works in perfect harmony. Our growth is built on the trust of hundreds of local and corporate clients.
+                </p>
+              </div>
+              <div className="grid grid-cols-2 gap-6">
+                 <div className="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 flex flex-col items-center text-center">
+                    <Award className="w-10 h-10 text-red-600 mb-4" />
+                    <h4 className="font-black text-blue-900">Grade-A Provider</h4>
+                    <p className="text-xs text-gray-500 font-bold mt-2">Government Authorized</p>
+                 </div>
+                 <div className="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 flex flex-col items-center text-center">
+                    <CheckCircle className="w-10 h-10 text-blue-900 mb-4" />
+                    <h4 className="font-black text-blue-900">100% Compliance</h4>
+                    <p className="text-xs text-gray-500 font-bold mt-2">BIS & IS Standards</p>
+                 </div>
+              </div>
+            </div>
+
+            {/* Leadership Section */}
+            <div className="mb-32">
+              <SectionTitle title="Our Leadership" subtitle="The experts behind our zero-compromise safety standards." />
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-10 mt-16 max-w-4xl mx-auto">
                 {[
-                  { title: "Precision Engineering", desc: "Every system is designed to the millimeter, ensuring 100% reliability in crisis situations.", icon: Settings },
-                  { title: "Legal Compliance", desc: "We navigate the complex landscape of government NOCs and fire codes so you don't have to.", icon: FileCheck },
-                  { title: "Continuous Support", desc: "Our AMC and emergency support teams are available 24/7 to keep your assets protected.", icon: PhoneCall }
-                ].map((item, i) => (
-                  <div key={i} className="bg-white p-10 rounded-3xl shadow-sm hover:shadow-xl transition-all border border-gray-100">
-                    <div className="w-14 h-14 bg-red-50 rounded-2xl flex items-center justify-center text-red-600 mb-6">
-                      <item.icon className="w-7 h-7" />
+                  { name: "Sunil Kumar", role: "Founder & Safety Director", img: "/images/team/leader1.png" },
+                  { name: "Anil Sharma", role: "Head of Operations", img: "/images/team/leader2.png" }
+                ].map((member, i) => (
+                  <div key={i} className="group text-center">
+                    <div className="relative mb-6 inline-block">
+                      <div className="absolute inset-0 bg-red-600 rounded-[2.5rem] rotate-3 group-hover:rotate-6 transition-transform -z-10 opacity-10"></div>
+                      <img 
+                        src={member.img} 
+                        alt={member.name} 
+                        className="w-48 h-48 md:w-64 md:h-64 object-cover rounded-[2.5rem] shadow-xl border-4 border-white grayscale group-hover:grayscale-0 transition-all duration-500" 
+                      />
                     </div>
-                    <h3 className="text-2xl font-black text-blue-900 mb-4">{item.title}</h3>
-                    <p className="text-gray-500 leading-relaxed">{item.desc}</p>
+                    <h4 className="text-2xl font-black text-blue-900">{member.name}</h4>
+                    <p className="text-red-600 font-bold text-sm uppercase tracking-widest mt-1">{member.role}</p>
                   </div>
                 ))}
               </div>
             </div>
 
             {/* Certifications Row */}
-            <div className="flex flex-wrap justify-center gap-16 lg:gap-24 opacity-60 hover:opacity-100 transition-opacity">
+            <div className="flex flex-wrap justify-center gap-10 opacity-50 hover:opacity-100 transition-opacity pb-10">
               {CERTIFICATIONS.map((cert, i) => (
-                <div key={i} className="flex items-center gap-5 grayscale hover:grayscale-0 transition-all">
-                  <img src={cert.image} alt={cert.title} className="w-16 h-16 object-contain" />
-                  <div className="hidden sm:block">
-                    <p className="font-black text-blue-900 text-sm uppercase tracking-tighter">{cert.title}</p>
-                    <p className="text-xs text-gray-400 font-bold">{cert.issuer}</p>
-                  </div>
-                </div>
+                <img key={i} src={cert.image} alt={cert.title} className="h-10 md:h-12 w-auto grayscale hover:grayscale-0 transition-all" />
               ))}
             </div>
           </div>
