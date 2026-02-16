@@ -22,12 +22,21 @@ const ContactPage = () => {
             <p className="text-xl text-gray-500 mb-12">Submit your details for a technical consultation. We respond within 4 business hours.</p>
             
             <div className="space-y-10">
-              <div className="flex gap-6 cursor-pointer" onClick={() => window.location.href = `tel:${CONTACT_INFO.phone}`}>
-                <div className="bg-white p-5 rounded-3xl shadow-xl"><Phone className="text-red-600 w-8 h-8" /></div>
-                <div>
-                  <h4 className="text-gray-400 font-black uppercase text-xs tracking-widest mb-1">Corporate Hotline</h4>
-                  <p className="text-2xl font-black text-blue-900">{CONTACT_INFO.phone}</p>
+              <div className="space-y-6">
+                <div className="flex gap-6 cursor-pointer" onClick={() => window.location.href = `tel:${CONTACT_INFO.phone}`}>
+                  <div className="bg-white p-5 rounded-3xl shadow-xl"><Phone className="text-red-600 w-8 h-8" /></div>
+                  <div>
+                    <h4 className="text-gray-400 font-black uppercase text-xs tracking-widest mb-1">Corporate Hotline</h4>
+                    <p className="text-2xl font-black text-blue-900">{CONTACT_INFO.phone}</p>
+                  </div>
                 </div>
+                {CONTACT_INFO.additionalPhones?.map((num, i) => (
+                  <div key={i} className="flex gap-6 cursor-pointer pl-20" onClick={() => window.location.href = `tel:${num.replace(/\s+/g, '')}`}>
+                    <div>
+                      <p className="text-2xl font-black text-blue-900">{num}</p>
+                    </div>
+                  </div>
+                ))}
               </div>
               <div className="flex gap-6 cursor-pointer" onClick={() => window.location.href = `mailto:${CONTACT_INFO.email}`}>
                 <div className="bg-white p-5 rounded-3xl shadow-xl"><Mail className="text-red-600 w-8 h-8" /></div>

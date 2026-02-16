@@ -79,9 +79,16 @@ const Footer = ({ setActivePage }: { setActivePage: (p: string) => void }) => {
                 <MapPin className="text-red-600 w-6 h-6 shrink-0" />
                 <span className="text-lg">{CONTACT_INFO.address}</span>
               </li>
-              <li className="flex gap-4 cursor-pointer" onClick={() => window.location.href = `tel:${CONTACT_INFO.phone}`}>
-                <Phone className="text-red-600 w-6 h-6 shrink-0" />
-                <span className="text-lg font-black text-white">{CONTACT_INFO.phone}</span>
+              <li className="space-y-4">
+                <div className="flex gap-4 cursor-pointer" onClick={() => window.location.href = `tel:${CONTACT_INFO.phone}`}>
+                  <Phone className="text-red-600 w-6 h-6 shrink-0" />
+                  <span className="text-lg font-black text-white">{CONTACT_INFO.phone}</span>
+                </div>
+                {CONTACT_INFO.additionalPhones?.map((num, i) => (
+                  <div key={i} className="flex gap-4 cursor-pointer pl-10" onClick={() => window.location.href = `tel:${num.replace(/\s+/g, '')}`}>
+                    <span className="text-lg font-black text-white">{num}</span>
+                  </div>
+                ))}
               </li>
               <li className="flex gap-4 cursor-pointer" onClick={() => window.location.href = `mailto:${CONTACT_INFO.email}`}>
                 <Mail className="text-red-600 w-6 h-6 shrink-0" />
