@@ -127,13 +127,13 @@ export const CLIENTS: Client[] = [
 ];
 
 export const CONTACT_INFO = {
-  phone: '+91 94161 11612',
-  additionalPhones: ['+91 97280 21149', '+91 98123 11612'],
+  phone: '+91 98123 11612',
+  additionalPhones: ['+91 97280 21149', '+91 94161 11612'],
   whatsapp: '919416111612',
   email: 'zedkingsurvice@gmail.com',
   address: 'Karnal Rd, near New Bus Stand, Friends Colony, Kaithal, Haryana 136027',
   workingHours: 'Mon - Sat, 8:00 AM - 6:00 PM',
-  emergency: '+91 94161 11612',
+  emergency: '+91 97280 21149',
   socials: {
     instagram: 'https://www.instagram.com/zedkingfiresafety?igsh=MTA2cGUzbnl6dTNkYg==',
     youtube: 'https://youtube.com/@zedkingfiresafety?si=2zZsUrFtY4SApJNc',
