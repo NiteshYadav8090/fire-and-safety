@@ -12,6 +12,10 @@ import FAQItem from './components/FAQItem';
 import { PROJECTS, CERTIFICATIONS, FAQ, CONTACT_INFO } from './constants';
 import { MessageCircle, Phone, MapPin, Award, Users, CheckCircle, Settings, FileCheck, PhoneCall } from 'lucide-react';
 
+import poojaSinghImg from "@assets/image_1771253056187.png";
+import balvinderDhullImg from "@assets/image_1771253075746.png";
+import nareshRavishImg from "@assets/image_1771253115856.png";
+
 export default function App() {
   const [activePage, setActivePage] = useState('home');
 
@@ -134,10 +138,11 @@ export default function App() {
             {/* Leadership Section (Kept as new addition) */}
             <div className="mb-32">
               <SectionTitle title="Our Leadership" subtitle="The experts behind our zero-compromise safety standards." />
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-10 mt-16 max-w-4xl mx-auto">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mt-16 max-w-6xl mx-auto">
                 {[
-                  { name: "Sunil Kumar", role: "Founder & Safety Director", img: "/images/team/leader1.png" },
-                  { name: "Anil Sharma", role: "Head of Operations", img: "/images/team/leader2.png" }
+                  { name: "Pooja Singh", role: "Safety Director", img: poojaSinghImg },
+                  { name: "Balvinder Dhull", role: "Managing Director", img: balvinderDhullImg },
+                  { name: "Naresh Ravish", role: "Operations Head", img: nareshRavishImg }
                 ].map((member, i) => (
                   <div key={i} className="group text-center">
                     <div className="relative mb-6 inline-block">
