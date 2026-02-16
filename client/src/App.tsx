@@ -150,7 +150,7 @@ export default function App() {
                       <img 
                         src={member.img} 
                         alt={member.name} 
-                        className="w-48 h-48 md:w-64 md:h-64 object-cover rounded-[2.5rem] shadow-xl border-4 border-white grayscale group-hover:grayscale-0 transition-all duration-500" 
+                        className="w-48 h-48 md:w-64 md:h-64 object-cover rounded-[2.5rem] shadow-xl border-4 border-white transition-all duration-500" 
                       />
                     </div>
                     <h4 className="text-2xl font-black text-blue-900">{member.name}</h4>
