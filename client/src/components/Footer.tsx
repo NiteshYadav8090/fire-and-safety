@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { ShieldCheck, Search, ChevronRight, MapPin, Phone, Mail, Lock } from 'lucide-react';
+import { ShieldCheck, Search, ChevronRight, MapPin, Phone, Mail, Lock, Instagram, Youtube, Facebook } from 'lucide-react';
 import { SERVICES, CONTACT_INFO } from '@/constants';
 
 const Footer = ({ setActivePage }: { setActivePage: (p: string) => void }) => {
@@ -8,6 +8,12 @@ const Footer = ({ setActivePage }: { setActivePage: (p: string) => void }) => {
     setActivePage(id);
     window.scrollTo(0, 0);
   };
+
+  const socialLinks = [
+    { icon: Facebook, url: CONTACT_INFO.socials.facebook, color: 'hover:bg-blue-600' },
+    { icon: Instagram, url: CONTACT_INFO.socials.instagram, color: 'hover:bg-pink-600' },
+    { icon: Youtube, url: CONTACT_INFO.socials.youtube, color: 'hover:bg-red-600' },
+  ];
 
   return (
     <footer className="bg-blue-950 text-white pt-32 pb-16">
@@ -25,7 +31,17 @@ const Footer = ({ setActivePage }: { setActivePage: (p: string) => void }) => {
               ISO 9001:2015 certified leader in Fire Safety Engineering. We provide total peace of mind through BIS approved technologies and Grade-A expertise.
             </p>
             <div className="flex gap-4">
-              {['fb', 'tw', 'ln', 'ig'].map(s => <div key={s} className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-red-600 hover:border-red-600 transition-all cursor-pointer group"><Search className="w-5 h-5 text-gray-400 group-hover:text-white" /></div>)}
+              {socialLinks.map((social, idx) => (
+                <a 
+                  key={idx} 
+                  href={social.url} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className={`w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center ${social.color} hover:border-transparent transition-all cursor-pointer group`}
+                >
+                  <social.icon className="w-5 h-5 text-gray-400 group-hover:text-white" />
+                </a>
+              ))}
             </div>
           </div>
 

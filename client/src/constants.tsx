@@ -132,7 +132,12 @@ export const CONTACT_INFO = {
   email: 'zedkingsurvice@gmail.com',
   address: 'Karnal Rd, near New Bus Stand, Friends Colony, Kaithal, Haryana 136027',
   workingHours: 'Mon - Sat, 9:00 AM - 7:00 PM',
-  emergency: '+91 94161 11612'
+  emergency: '+91 94161 11612',
+  socials: {
+    instagram: 'https://www.instagram.com/zedkingfiresafety?igsh=MTA2cGUzbnl6dTNkYg==',
+    youtube: 'https://youtube.com/@zedkingfiresafety?si=2zZsUrFtY4SApJNc',
+    facebook: 'https://www.facebook.com/share/16szRPuggV/?mibextid=wwXIfr'
+  }
 };
 
 export const FAQ = [

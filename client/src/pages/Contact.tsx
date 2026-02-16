@@ -1,10 +1,16 @@
 
 import React, { useState } from 'react';
-import { Phone, Mail, Clock, CheckCircle } from 'lucide-react';
+import { Phone, Mail, Clock, CheckCircle, Instagram, Youtube, Facebook } from 'lucide-react';
 import { CONTACT_INFO, SERVICES } from '@/constants';
 
 const ContactPage = () => {
   const [submitted, setSubmitted] = useState(false);
+
+  const socialLinks = [
+    { name: 'Facebook', icon: Facebook, url: CONTACT_INFO.socials.facebook, color: 'text-blue-600' },
+    { name: 'Instagram', icon: Instagram, url: CONTACT_INFO.socials.instagram, color: 'text-pink-600' },
+    { name: 'YouTube', icon: Youtube, url: CONTACT_INFO.socials.youtube, color: 'text-red-600' },
+  ];
 
   return (
     <section className="py-32 bg-gray-50">
@@ -36,6 +42,24 @@ const ContactPage = () => {
                   <h4 className="text-gray-400 font-black uppercase text-xs tracking-widest mb-1">Office Hours</h4>
                   <p className="text-2xl font-black text-blue-900">{CONTACT_INFO.workingHours}</p>
                 </div>
+              </div>
+            </div>
+
+            <div className="mt-16">
+              <h4 className="text-gray-400 font-black uppercase text-xs tracking-widest mb-6">Social Presence</h4>
+              <div className="flex flex-wrap gap-4">
+                {socialLinks.map((social) => (
+                  <a 
+                    key={social.name}
+                    href={social.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 bg-white px-6 py-4 rounded-2xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-1"
+                  >
+                    <social.icon className={`w-6 h-6 ${social.color}`} />
+                    <span className="font-black text-blue-900">{social.name}</span>
+                  </a>
+                ))}
               </div>
             </div>
           </div>
