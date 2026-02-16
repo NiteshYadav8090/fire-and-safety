@@ -140,9 +140,9 @@ export default function App() {
               <SectionTitle title="Our Leadership" subtitle="The experts behind our zero-compromise safety standards." />
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mt-16 max-w-6xl mx-auto">
                 {[
-                  { name: "Pooja Singh", role: "Safety Director", img: poojaSinghImg },
-                  { name: "Balvinder Dhull", role: "Managing Director", img: balvinderDhullImg },
-                  { name: "Naresh Ravish", role: "Operations Head", img: nareshRavishImg }
+                  { name: "Pooja Singh", role: "Managing Director", img: poojaSinghImg },
+                  { name: "Balvinder Dhull", role: "Operations Head", img: balvinderDhullImg },
+                  { name: "Naresh Ravish", role: "Safety Director", img: nareshRavishImg }
                 ].map((member, i) => (
                   <div key={i} className="group text-center">
                     <div className="relative mb-6 inline-block">
