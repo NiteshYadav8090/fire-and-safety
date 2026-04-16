@@ -13,7 +13,7 @@ const ContactPage = () => {
   ];
 
   return (
-    <section className="py-20 lg:py-32 bg-gray-50">
+    <section className="pt-28 pb-16 md:pt-32 md:pb-20 lg:pt-36 lg:pb-16 bg-gray-50">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-start">
           <div>
@@ -116,6 +116,25 @@ const ContactPage = () => {
               </form>
             )}
           </div>
+        </div>
+
+        {/* Google Maps Embed */}
+        <div className="mt-10 lg:mt-16 rounded-2xl lg:rounded-[2rem] overflow-hidden shadow-2xl border border-gray-100">
+          <div className="bg-blue-900 px-6 py-4 flex items-center gap-3">
+            <div className="w-2.5 h-2.5 rounded-full bg-red-500"></div>
+            <p className="text-white font-black text-sm uppercase tracking-widest">Our Location — Kaithal, Haryana</p>
+          </div>
+          <iframe
+            title="Zed-King Fire and Safety Location"
+            src="https://maps.google.com/maps?q=Karnal+Rd,+near+New+Bus+Stand,+Friends+Colony,+Kaithal,+Haryana+136027&output=embed&z=15"
+            width="100%"
+            height="380"
+            style={{ border: 0, display: 'block' }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            className="w-full h-64 sm:h-80 md:h-96"
+          ></iframe>
         </div>
       </div>
     </section>

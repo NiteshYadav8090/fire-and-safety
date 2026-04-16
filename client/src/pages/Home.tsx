@@ -10,7 +10,7 @@ const Home = ({ setActivePage }: { setActivePage: (p: string) => void }) => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative h-screen min-h-[600px] flex items-center overflow-hidden">
+      <section className="relative h-[75vh] min-h-[520px] flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
             src={heroBg} 

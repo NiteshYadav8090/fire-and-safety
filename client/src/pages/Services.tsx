@@ -12,7 +12,7 @@ const Services = ({ setActivePage }: { setActivePage: (p: string) => void }) => 
   };
 
   return (
-    <section className="py-20 lg:py-32 bg-gray-50">
+    <section className="pt-28 pb-16 md:pt-32 md:pb-20 lg:pt-36 lg:pb-32 bg-gray-50">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="mb-10 lg:mb-16 rounded-2xl lg:rounded-[3rem] overflow-hidden shadow-2xl h-48 sm:h-72 md:h-96 lg:h-[500px] relative">
           <img src={fireFightingImg} alt="Fire Safety in Action" className="w-full h-full object-cover" />

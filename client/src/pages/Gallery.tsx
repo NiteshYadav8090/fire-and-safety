@@ -4,7 +4,7 @@ import SectionTitle from '@/components/SectionTitle';
 import { GALLERY } from '@/constants';
 
 const GalleryPage = () => (
-  <section className="py-20 lg:py-32 bg-white">
+  <section className="pt-28 pb-16 md:pt-32 md:pb-20 lg:pt-36 lg:pb-32 bg-white">
     <div className="container mx-auto px-4 lg:px-8">
       <SectionTitle title="Real Projects, Real Safety" subtitle="Browse through our high-quality installation and safety training sessions." />
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">

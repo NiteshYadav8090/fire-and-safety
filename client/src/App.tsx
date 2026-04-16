@@ -30,7 +30,7 @@ export default function App() {
       case 'services': return <Services setActivePage={setActivePage} />;
       case 'gallery': return <GalleryPage />;
       case 'projects': return (
-        <section className="py-20 lg:py-32 bg-white">
+        <section className="pt-28 pb-16 md:pt-32 md:pb-20 lg:pt-36 lg:pb-32 bg-white">
           <div className="container mx-auto px-4 lg:px-8">
             <SectionTitle title="Corporate Case Studies" subtitle="A visual journey through our large-scale safety deployments." />
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
@@ -62,7 +62,7 @@ export default function App() {
         </div>
       );
       case 'about': return (
-        <section className="py-16 md:py-20 bg-white overflow-hidden">
+        <section className="pt-28 pb-16 md:pt-32 md:pb-20 lg:pt-36 lg:pb-24 bg-white overflow-hidden">
           <div className="container mx-auto px-4 lg:px-8 max-w-7xl">
             {/* Mission & Vision Section */}
             <div className="flex flex-col lg:flex-row gap-10 lg:gap-20 items-center mb-16 md:mb-24 lg:mb-32">
@@ -150,7 +150,7 @@ export default function App() {
                       <img 
                         src={member.img} 
                         alt={member.name} 
-                        className="w-40 h-40 sm:w-48 sm:h-48 md:w-64 md:h-64 object-cover rounded-[2rem] shadow-xl border-4 border-white transition-all duration-500" 
+                        className="w-52 h-52 sm:w-64 sm:h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 object-cover rounded-[2rem] shadow-xl border-4 border-white transition-all duration-500" 
                       />
                     </div>
                     <h4 className="text-xl md:text-2xl font-black text-blue-900">{member.name}</h4>
