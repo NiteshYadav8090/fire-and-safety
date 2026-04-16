@@ -70,8 +70,8 @@ export default function App() {
                 <div className="bg-red-50 px-5 py-4 rounded-2xl border border-red-100 inline-block">
                   <span className="text-red-600 font-black tracking-widest uppercase text-sm">Since 2012</span>
                 </div>
-                <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black text-blue-900 leading-[1.1]">The Name You Trust For <span className="text-red-600">Total Protection.</span></h2>
-                <p className="text-lg md:text-2xl text-gray-600 leading-relaxed">
+                <h2 className="text-2xl sm:text-3xl md:text-5xl lg:text-7xl font-black text-blue-900 leading-[1.1]">The Name You Trust For <span className="text-red-600">Total Protection.</span></h2>
+                <p className="text-sm sm:text-base md:text-xl lg:text-2xl text-gray-600 leading-relaxed">
                   We don't just sell equipment; we build resilient safety architectures. With over 12 years of core engineering experience, Zed-King Fire and Safety is the gold standard in life safety.
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 py-6 border-y border-gray-100">
@@ -87,23 +87,23 @@ export default function App() {
               </div>
               <div className="w-full lg:w-1/2 relative group mt-8 lg:mt-0">
                 <div className="absolute -inset-4 bg-red-600/5 rounded-[4rem] blur-3xl"></div>
-                <div className="relative px-6 sm:px-10 lg:px-0">
-                  <div className="absolute -top-4 -right-2 sm:-top-6 sm:-right-6 lg:-top-10 lg:-right-10 bg-red-600 text-white p-5 md:p-8 rounded-2xl md:rounded-3xl shadow-2xl z-20">
-                    <p className="text-3xl md:text-5xl font-black">12+</p>
-                    <p className="font-bold text-xs uppercase tracking-widest opacity-80">Years of Trust</p>
+                <div className="relative px-8 sm:px-10 lg:px-0 mt-6">
+                  <div className="absolute -top-3 -right-1 sm:-top-6 sm:-right-4 lg:-top-10 lg:-right-10 bg-red-600 text-white p-3 sm:p-5 md:p-8 rounded-xl sm:rounded-2xl md:rounded-3xl shadow-2xl z-20">
+                    <p className="text-2xl sm:text-3xl md:text-5xl font-black">12+</p>
+                    <p className="font-bold text-[10px] sm:text-xs uppercase tracking-widest opacity-80">Years of Trust</p>
                   </div>
-                  <img 
-                    src="https://lh3.googleusercontent.com/p/AF1QipPIy8ueAKET2L2nQZ81XiB9kjmflF-LJB1zbvqr=s1000" 
-                    alt="Headquarters" 
-                    className="rounded-2xl md:rounded-[3rem] shadow-[0_30px_60px_rgba(0,0,0,0.15)] relative z-10 w-full object-cover h-64 sm:h-80 md:h-[450px] lg:h-[600px] border-4 md:border-8 border-white" 
+                  <img
+                    src="https://lh3.googleusercontent.com/p/AF1QipPIy8ueAKET2L2nQZ81XiB9kjmflF-LJB1zbvqr=s1000"
+                    alt="Headquarters"
+                    className="rounded-2xl md:rounded-[3rem] shadow-[0_30px_60px_rgba(0,0,0,0.15)] relative z-10 w-full object-cover h-56 sm:h-72 md:h-[450px] lg:h-[600px] border-4 md:border-8 border-white"
                   />
-                  <div className="absolute -bottom-4 -left-2 sm:-bottom-6 sm:-left-6 lg:-bottom-10 lg:-left-10 bg-white p-5 md:p-8 rounded-2xl md:rounded-[2rem] shadow-2xl border border-gray-100 z-20 flex items-center gap-4 md:gap-6">
-                    <div className="w-12 h-12 md:w-16 md:h-16 bg-blue-50 rounded-xl md:rounded-2xl flex items-center justify-center shrink-0">
-                      <CheckCircle className="w-6 h-6 md:w-8 md:h-8 text-blue-900" />
+                  <div className="absolute -bottom-3 -left-1 sm:-bottom-6 sm:-left-4 lg:-bottom-10 lg:-left-10 bg-white p-3 sm:p-5 md:p-8 rounded-xl sm:rounded-2xl md:rounded-[2rem] shadow-2xl border border-gray-100 z-20 flex items-center gap-3 md:gap-6">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 bg-blue-50 rounded-lg sm:rounded-xl md:rounded-2xl flex items-center justify-center shrink-0">
+                      <CheckCircle className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 text-blue-900" />
                     </div>
                     <div>
-                      <p className="text-2xl md:text-3xl font-black text-blue-900">650+</p>
-                      <p className="font-bold text-gray-400 uppercase text-xs tracking-widest">Projects Completed</p>
+                      <p className="text-xl sm:text-2xl md:text-3xl font-black text-blue-900">650+</p>
+                      <p className="font-bold text-gray-400 uppercase text-[10px] sm:text-xs tracking-widest">Projects Completed</p>
                     </div>
                   </div>
                 </div>

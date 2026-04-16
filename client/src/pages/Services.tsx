@@ -37,9 +37,9 @@ const Services = ({ setActivePage }: { setActivePage: (p: string) => void }) => 
                     {s.id === 'training' && <GraduationCap />}
                     {s.id === 'noc' && <FileCheck />}
                   </div>
-                  <h3 className="text-2xl md:text-3xl lg:text-4xl font-black text-blue-900">{s.title}</h3>
+                  <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-black text-blue-900">{s.title}</h3>
                 </div>
-                <p className="text-base md:text-lg lg:text-xl text-gray-600 leading-relaxed">{s.longDescription}</p>
+                <p className="text-sm md:text-base lg:text-xl text-gray-600 leading-relaxed">{s.longDescription}</p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
                   <div className="bg-gray-50 p-4 md:p-6 rounded-xl md:rounded-2xl">
                     <h4 className="text-red-600 font-black uppercase text-xs tracking-widest mb-3 flex items-center"><Award className="w-4 h-4 mr-2" /> Key Features</h4>

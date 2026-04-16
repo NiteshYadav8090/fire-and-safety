@@ -46,7 +46,7 @@ const Navbar = ({
   return (
     // Update: Mobile view ke liye 'bg-white' fix kiya hai taaki transparency issue na ho
     <nav
-      className={`fixed w-full z-50 transition-all duration-500 ${isScrolled ? "bg-white shadow-2xl py-3" : "bg-white lg:bg-white/90 backdrop-blur-sm py-5"}`}
+      className={`fixed w-full z-50 transition-all duration-500 ${isScrolled ? "bg-white shadow-2xl py-2 sm:py-3" : "bg-white lg:bg-white/90 backdrop-blur-sm py-3 sm:py-4 lg:py-5"}`}
     >
       <div className="container mx-auto px-4 lg:px-8 flex justify-between items-center">
         <div
@@ -56,13 +56,13 @@ const Navbar = ({
           <img
             src={logoImg}
             alt="Zed-King Logo"
-            className="h-14 w-auto object-contain transition-transform group-hover:scale-105"
+            className="h-9 sm:h-11 lg:h-14 w-auto object-contain transition-transform group-hover:scale-105"
           />
-          <div className="flex flex-col -space-y-1">
-            <span className={`text-xl md:text-2xl font-black tracking-tighter text-blue-900`}>
+          <div className="flex flex-col -space-y-0.5">
+            <span className="text-base sm:text-lg lg:text-2xl font-black tracking-tighter text-blue-900">
               ZED-KING
             </span>
-            <span className="text-[10px] md:text-xs font-bold text-red-600 tracking-[0.2em] uppercase">
+            <span className="text-[9px] sm:text-[10px] font-bold text-red-600 tracking-[0.15em] uppercase">
               Fire and Safety
             </span>
           </div>
