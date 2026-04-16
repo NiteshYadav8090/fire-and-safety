@@ -88,7 +88,7 @@ const Home = ({ setActivePage }: { setActivePage: (p: string) => void }) => {
             title="Fire Protection Engineering" 
             subtitle="Industry-leading solutions for factories, residential complexes, and high-rise commercial structures." 
           />
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             {SERVICES.slice(0, 6).map((s) => (
               <div key={s.id} className="bg-white p-10 rounded-[2.5rem] shadow-sm hover:shadow-2xl border border-gray-100 transition-all duration-500 group relative overflow-hidden flex flex-col">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-red-50 rounded-bl-[100px] -mr-8 -mt-8 group-hover:bg-red-600 transition-colors duration-500"></div>

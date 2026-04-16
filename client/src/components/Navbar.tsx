@@ -50,28 +50,18 @@ const Navbar = ({
     >
       <div className="container mx-auto px-4 lg:px-8 flex justify-between items-center">
         <div
-          className="flex items-center space-x-3 cursor-pointer group"
+          className="flex items-center space-x-2 cursor-pointer group"
           onClick={() => handleLinkClick("home")}
         >
           <img
             src={logoImg}
             alt="Zed-King Logo"
-            className="h-14 w-auto object-contain transition-transform group-hover:scale-105"
+            className="h-12 w-auto object-contain transition-transform group-hover:scale-105"
           />
-          <div className="flex flex-col -space-y-1">
-            <span
-              className={`text-xl md:text-2xl font-black tracking-tighter text-blue-900`}
-            >
-              ZED-KING
-            </span>
-            <span className="text-[10px] md:text-xs font-bold text-red-600 tracking-[0.2em] uppercase">
-              Fire and Safety
-            </span>
-          </div>
         </div>
 
         {/* Desktop Nav */}
-        <div className="hidden lg:flex items-center space-x-10">
+        <div className="hidden lg:flex items-center space-x-6 xl:space-x-10">
           {navLinks.map((link) => (
             <button
               key={link.id}
@@ -88,9 +78,9 @@ const Navbar = ({
           ))}
           <button
             onClick={() => handleLinkClick("contact")}
-            className="bg-red-600 text-white px-8 py-3.5 rounded-xl font-black text-sm uppercase tracking-widest hover:bg-red-700 transition-all shadow-xl hover:shadow-red-500/30 hover:-translate-y-1"
+            className="bg-red-600 text-white px-5 py-3 xl:px-8 xl:py-3.5 rounded-xl font-black text-sm uppercase tracking-widest hover:bg-red-700 transition-all shadow-xl hover:shadow-red-500/30 hover:-translate-y-1"
           >
-            Get Expert Quote
+            Get Started
           </button>
         </div>
 
