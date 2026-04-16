@@ -13,88 +13,88 @@ const ContactPage = () => {
   ];
 
   return (
-    <section className="py-32 bg-gray-50">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
+    <section className="py-20 lg:py-32 bg-gray-50">
+      <div className="container mx-auto px-4 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-start">
           <div>
-            <span className="text-red-600 font-black tracking-[0.3em] uppercase text-sm mb-6 block">Inquiry Channel</span>
-            <h2 className="text-4xl md:text-6xl font-black text-blue-900 mb-8 leading-tight">Let's Secure <br />Your Facility.</h2>
-            <p className="text-xl text-gray-500 mb-12">Submit your details for a technical consultation. We respond within 4 business hours.</p>
+            <span className="text-red-600 font-black tracking-[0.3em] uppercase text-sm mb-4 block">Inquiry Channel</span>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-blue-900 mb-6 leading-tight">Let's Secure <br />Your Facility.</h2>
+            <p className="text-base md:text-xl text-gray-500 mb-8 md:mb-12">Submit your details for a technical consultation. We respond within 4 business hours.</p>
             
-            <div className="space-y-10">
-              <div className="space-y-6">
-                <div className="flex gap-6 cursor-pointer" onClick={() => window.location.href = `tel:${CONTACT_INFO.phone}`}>
-                  <div className="bg-white p-5 rounded-3xl shadow-xl"><Phone className="text-red-600 w-8 h-8" /></div>
+            <div className="space-y-6 md:space-y-10">
+              <div className="space-y-4 md:space-y-6">
+                <div className="flex gap-4 md:gap-6 cursor-pointer" onClick={() => window.location.href = `tel:${CONTACT_INFO.phone}`}>
+                  <div className="bg-white p-4 md:p-5 rounded-2xl md:rounded-3xl shadow-xl shrink-0"><Phone className="text-red-600 w-6 h-6 md:w-8 md:h-8" /></div>
                   <div>
                     <h4 className="text-gray-400 font-black uppercase text-xs tracking-widest mb-1">Corporate Hotline</h4>
-                    <p className="text-2xl font-black text-blue-900">{CONTACT_INFO.phone}</p>
+                    <p className="text-lg md:text-2xl font-black text-blue-900 break-all">{CONTACT_INFO.phone}</p>
                   </div>
                 </div>
                 {CONTACT_INFO.additionalPhones?.map((num, i) => (
-                  <div key={i} className="flex gap-6 cursor-pointer pl-20" onClick={() => window.location.href = `tel:${num.replace(/\s+/g, '')}`}>
+                  <div key={i} className="flex gap-4 cursor-pointer pl-14 md:pl-20" onClick={() => window.location.href = `tel:${num.replace(/\s+/g, '')}`}>
                     <div>
-                      <p className="text-2xl font-black text-blue-900">{num}</p>
+                      <p className="text-lg md:text-2xl font-black text-blue-900">{num}</p>
                     </div>
                   </div>
                 ))}
               </div>
-              <div className="flex gap-6 cursor-pointer" onClick={() => window.location.href = `mailto:${CONTACT_INFO.email}`}>
-                <div className="bg-white p-5 rounded-3xl shadow-xl"><Mail className="text-red-600 w-8 h-8" /></div>
+              <div className="flex gap-4 md:gap-6 cursor-pointer" onClick={() => window.location.href = `mailto:${CONTACT_INFO.email}`}>
+                <div className="bg-white p-4 md:p-5 rounded-2xl md:rounded-3xl shadow-xl shrink-0"><Mail className="text-red-600 w-6 h-6 md:w-8 md:h-8" /></div>
                 <div>
                   <h4 className="text-gray-400 font-black uppercase text-xs tracking-widest mb-1">Project Inquiries</h4>
-                  <p className="text-2xl font-black text-blue-900">{CONTACT_INFO.email}</p>
+                  <p className="text-base md:text-2xl font-black text-blue-900 break-all">{CONTACT_INFO.email}</p>
                 </div>
               </div>
-              <div className="flex gap-6">
-                <div className="bg-white p-5 rounded-3xl shadow-xl"><Clock className="text-red-600 w-8 h-8" /></div>
+              <div className="flex gap-4 md:gap-6">
+                <div className="bg-white p-4 md:p-5 rounded-2xl md:rounded-3xl shadow-xl shrink-0"><Clock className="text-red-600 w-6 h-6 md:w-8 md:h-8" /></div>
                 <div>
                   <h4 className="text-gray-400 font-black uppercase text-xs tracking-widest mb-1">Office Hours</h4>
-                  <p className="text-2xl font-black text-blue-900">{CONTACT_INFO.workingHours}</p>
+                  <p className="text-base md:text-2xl font-black text-blue-900">{CONTACT_INFO.workingHours}</p>
                 </div>
               </div>
             </div>
 
-            <div className="mt-16">
-              <h4 className="text-gray-400 font-black uppercase text-xs tracking-widest mb-6">Social Presence</h4>
-              <div className="flex flex-wrap gap-4">
+            <div className="mt-10 md:mt-16">
+              <h4 className="text-gray-400 font-black uppercase text-xs tracking-widest mb-4 md:mb-6">Social Presence</h4>
+              <div className="flex flex-wrap gap-3 md:gap-4">
                 {socialLinks.map((social) => (
                   <a 
                     key={social.name}
                     href={social.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-3 bg-white px-6 py-4 rounded-2xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-1"
+                    className="flex items-center gap-2 md:gap-3 bg-white px-4 md:px-6 py-3 md:py-4 rounded-xl md:rounded-2xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-1"
                   >
-                    <social.icon className={`w-6 h-6 ${social.color}`} />
-                    <span className="font-black text-blue-900">{social.name}</span>
+                    <social.icon className={`w-5 h-5 md:w-6 md:h-6 ${social.color}`} />
+                    <span className="font-black text-blue-900 text-sm md:text-base">{social.name}</span>
                   </a>
                 ))}
               </div>
             </div>
           </div>
 
-          <div className="bg-white p-12 lg:p-16 rounded-[3rem] shadow-2xl border border-gray-100">
+          <div className="bg-white p-6 sm:p-10 lg:p-16 rounded-2xl lg:rounded-[3rem] shadow-2xl border border-gray-100">
             {submitted ? (
-              <div className="text-center py-20">
-                <div className="bg-green-100 w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-8 shadow-inner"><CheckCircle className="text-green-600 w-12 h-12" /></div>
-                <h3 className="text-4xl font-black text-blue-900 mb-4">Request Received!</h3>
-                <p className="text-xl text-gray-500 leading-relaxed">A safety advisor has been assigned to your request and will call you shortly.</p>
-                <button onClick={() => setSubmitted(false)} className="mt-12 text-red-600 font-black text-sm uppercase tracking-widest border-b-2 border-red-600 pb-1">Submit Another Query</button>
+              <div className="text-center py-10 md:py-20">
+                <div className="bg-green-100 w-20 h-20 md:w-24 md:h-24 rounded-full flex items-center justify-center mx-auto mb-6 md:mb-8 shadow-inner"><CheckCircle className="text-green-600 w-10 h-10 md:w-12 md:h-12" /></div>
+                <h3 className="text-2xl md:text-4xl font-black text-blue-900 mb-4">Request Received!</h3>
+                <p className="text-base md:text-xl text-gray-500 leading-relaxed">A safety advisor has been assigned to your request and will call you shortly.</p>
+                <button onClick={() => setSubmitted(false)} className="mt-8 md:mt-12 text-red-600 font-black text-sm uppercase tracking-widest border-b-2 border-red-600 pb-1">Submit Another Query</button>
               </div>
             ) : (
-              <form onSubmit={(e) => {e.preventDefault(); setSubmitted(true);}} className="space-y-8">
+              <form onSubmit={(e) => {e.preventDefault(); setSubmitted(true);}} className="space-y-6 md:space-y-8">
                 <div className="space-y-2">
                   <label className="text-xs font-black text-blue-900 uppercase tracking-widest">Full Name</label>
-                  <input required type="text" className="w-full bg-gray-50 border-2 border-transparent focus:border-red-600 focus:bg-white p-5 rounded-2xl outline-none transition-all text-lg font-bold text-blue-900" placeholder="Your Name" />
+                  <input required type="text" className="w-full bg-gray-50 border-2 border-transparent focus:border-red-600 focus:bg-white p-4 md:p-5 rounded-xl md:rounded-2xl outline-none transition-all text-base md:text-lg font-bold text-blue-900" placeholder="Your Name" />
                 </div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 md:gap-8">
                   <div className="space-y-2">
                     <label className="text-xs font-black text-blue-900 uppercase tracking-widest">Mobile Number</label>
-                    <input required type="tel" className="w-full bg-gray-50 border-2 border-transparent focus:border-red-600 focus:bg-white p-5 rounded-2xl outline-none transition-all text-lg font-bold text-blue-900" placeholder="+91 XXXXX XXXXX" />
+                    <input required type="tel" className="w-full bg-gray-50 border-2 border-transparent focus:border-red-600 focus:bg-white p-4 md:p-5 rounded-xl md:rounded-2xl outline-none transition-all text-base md:text-lg font-bold text-blue-900" placeholder="+91 XXXXX XXXXX" />
                   </div>
                   <div className="space-y-2">
                     <label className="text-xs font-black text-blue-900 uppercase tracking-widest">Required Service</label>
-                    <select required className="w-full bg-gray-50 border-2 border-transparent focus:border-red-600 focus:bg-white p-5 rounded-2xl outline-none transition-all text-lg font-bold text-blue-900 appearance-none cursor-pointer">
+                    <select required className="w-full bg-gray-50 border-2 border-transparent focus:border-red-600 focus:bg-white p-4 md:p-5 rounded-xl md:rounded-2xl outline-none transition-all text-base md:text-lg font-bold text-blue-900 appearance-none cursor-pointer">
                       <option value="" className="text-blue-900">Select Service</option>
                       {SERVICES.map(s => <option key={s.id} value={s.id} className="text-blue-900">{s.title}</option>)}
                       <option value="audit" className="text-blue-900">Safety Audit</option>
@@ -104,13 +104,13 @@ const ContactPage = () => {
                 </div>
                 <div className="space-y-2">
                   <label className="text-xs font-black text-blue-900 uppercase tracking-widest">Site Address</label>
-                  <input required type="text" className="w-full bg-gray-50 border-2 border-transparent focus:border-red-600 focus:bg-white p-5 rounded-2xl outline-none transition-all text-lg font-bold text-blue-900" placeholder="Full address of the facility" />
+                  <input required type="text" className="w-full bg-gray-50 border-2 border-transparent focus:border-red-600 focus:bg-white p-4 md:p-5 rounded-xl md:rounded-2xl outline-none transition-all text-base md:text-lg font-bold text-blue-900" placeholder="Full address of the facility" />
                 </div>
                 <div className="space-y-2">
                   <label className="text-xs font-black text-blue-900 uppercase tracking-widest">Site Requirements</label>
-                  <textarea rows={4} className="w-full bg-gray-50 border-2 border-transparent focus:border-red-600 focus:bg-white p-5 rounded-2xl outline-none transition-all text-lg font-bold text-blue-900" placeholder="Tell us about your facility..."></textarea>
+                  <textarea rows={4} className="w-full bg-gray-50 border-2 border-transparent focus:border-red-600 focus:bg-white p-4 md:p-5 rounded-xl md:rounded-2xl outline-none transition-all text-base md:text-lg font-bold text-blue-900" placeholder="Tell us about your facility..."></textarea>
                 </div>
-                <button type="submit" className="w-full bg-red-600 hover:bg-red-700 text-white py-6 rounded-3xl font-black text-2xl shadow-2xl hover:shadow-red-600/30 transition-all transform active:scale-95">
+                <button type="submit" className="w-full bg-red-600 hover:bg-red-700 text-white py-4 md:py-6 rounded-2xl md:rounded-3xl font-black text-lg md:text-2xl shadow-2xl hover:shadow-red-600/30 transition-all transform active:scale-95">
                   Confirm Inquiry
                 </button>
               </form>
