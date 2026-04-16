@@ -16,7 +16,7 @@ const FAQItem = ({ item }: { item: { q: string, a: string } }) => {
         </div>
       </button>
       <div className={`overflow-hidden transition-all duration-300 ${isOpen ? 'max-h-96 mt-4 opacity-100' : 'max-h-0 opacity-0'}`}>
-        <p className="text-gray-600 leading-relaxed text-lg">{item.a}</p>
+        <p className="text-gray-600 leading-relaxed text-base md:text-lg">{item.a}</p>
       </div>
     </div>
   );

@@ -10,39 +10,44 @@ const Home = ({ setActivePage }: { setActivePage: (p: string) => void }) => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center overflow-hidden">
+      <section className="relative h-screen min-h-[600px] flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
             src={heroBg} 
-            className="w-full h-full object-cover" 
+            className="w-full h-full object-cover object-center"
             alt="Fire Safety Hero" 
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-900/95 via-blue-900/80 to-transparent"></div>
+          {/* Mobile: full dark overlay | Desktop: left-to-right gradient */}
+          <div className="absolute inset-0 bg-blue-900/85 md:bg-transparent"></div>
+          <div className="absolute inset-0 hidden md:block bg-gradient-to-r from-blue-900/95 via-blue-900/80 to-blue-900/20"></div>
         </div>
 
-        <div className="container mx-auto px-4 lg:px-8 z-10 text-white">
-          <div className="max-w-4xl pt-24 pb-16">
-            <div className="flex items-center gap-3 mb-6">
-              <span className="bg-red-600 text-white px-4 py-2 rounded-lg text-xs sm:text-sm font-black tracking-[0.15em] uppercase shadow-lg shadow-red-600/30">
+        <div className="container mx-auto px-5 sm:px-6 lg:px-8 z-10 text-white w-full">
+          <div className="max-w-2xl lg:max-w-3xl pt-20 sm:pt-24">
+            <div className="mb-5 sm:mb-6">
+              <span className="inline-block bg-red-600 text-white px-4 py-2 rounded-lg text-xs sm:text-sm font-black tracking-[0.15em] uppercase shadow-lg">
                 Authorized Grade-A Provider
               </span>
             </div>
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black mb-6 leading-[1.2] tracking-tight">
-              Complete <span className="text-red-500">Fire & Safety</span> <br /> Solutions by Zed-King
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black mb-5 sm:mb-6 leading-[1.15] tracking-tight">
+              Complete{" "}
+              <span className="text-red-400">Fire & Safety</span>
+              <br />
+              Solutions by Zed-King
             </h1>
-            <p className="text-sm sm:text-base md:text-lg text-gray-200 mb-10 leading-relaxed font-medium max-w-2xl">
+            <p className="text-sm sm:text-base md:text-lg text-blue-100 mb-8 sm:mb-10 leading-relaxed font-medium max-w-xl">
               Professional Grade Installation, Government Certification, and Hands-on Staff Training. We engineer safety for critical industrial assets.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
               <button 
                 onClick={() => { setActivePage('services'); window.scrollTo(0,0); }}
-                className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-2xl font-black text-base md:text-xl shadow-2xl flex items-center justify-center transition-all transform hover:-translate-y-1 hover:shadow-red-600/40"
+                className="bg-red-600 hover:bg-red-700 text-white px-7 py-4 rounded-xl sm:rounded-2xl font-black text-base sm:text-lg shadow-2xl flex items-center justify-center transition-all hover:-translate-y-1 hover:shadow-red-600/40 active:scale-95"
               >
-                Explore Services <ArrowRight className="ml-3 w-5 h-5 md:w-6 md:h-6" />
+                Explore Services <ArrowRight className="ml-3 w-5 h-5" />
               </button>
               <button 
                 onClick={() => { setActivePage('contact'); window.scrollTo(0,0); }}
-                className="bg-white/10 backdrop-blur-md border-2 border-white/20 hover:bg-white/20 text-white px-8 py-4 rounded-2xl font-black text-base md:text-xl shadow-2xl transition-all transform hover:-translate-y-1"
+                className="border-2 border-white/40 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white px-7 py-4 rounded-xl sm:rounded-2xl font-black text-base sm:text-lg transition-all hover:-translate-y-1 active:scale-95"
               >
                 Free Safety Audit
               </button>
@@ -52,8 +57,8 @@ const Home = ({ setActivePage }: { setActivePage: (p: string) => void }) => {
         
         {/* Scroll Indicator */}
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce hidden md:block">
-          <div className="w-8 h-12 border-2 border-white/30 rounded-full flex justify-center p-2">
-            <div className="w-1 h-3 bg-white rounded-full"></div>
+          <div className="w-7 h-11 border-2 border-white/40 rounded-full flex justify-center pt-2">
+            <div className="w-1 h-3 bg-white/80 rounded-full"></div>
           </div>
         </div>
       </section>
