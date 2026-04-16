@@ -50,14 +50,22 @@ const Navbar = ({
     >
       <div className="container mx-auto px-4 lg:px-8 flex justify-between items-center">
         <div
-          className="flex items-center space-x-2 cursor-pointer group"
+          className="flex items-center space-x-3 cursor-pointer group"
           onClick={() => handleLinkClick("home")}
         >
           <img
             src={logoImg}
             alt="Zed-King Logo"
-            className="h-12 w-auto object-contain transition-transform group-hover:scale-105"
+            className="h-14 w-auto object-contain transition-transform group-hover:scale-105"
           />
+          <div className="flex flex-col -space-y-1">
+            <span className={`text-xl md:text-2xl font-black tracking-tighter text-blue-900`}>
+              ZED-KING
+            </span>
+            <span className="text-[10px] md:text-xs font-bold text-red-600 tracking-[0.2em] uppercase">
+              Fire and Safety
+            </span>
+          </div>
         </div>
 
         {/* Desktop Nav */}
