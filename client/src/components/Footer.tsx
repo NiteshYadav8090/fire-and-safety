@@ -1,7 +1,8 @@
 
 import React from 'react';
-import { ShieldCheck, ChevronRight, MapPin, Phone, Mail, Lock, Instagram, Youtube, Facebook } from 'lucide-react';
+import { ShieldCheck, ChevronRight, MapPin, Phone, Mail, Instagram, Youtube, Facebook } from 'lucide-react';
 import { SERVICES, CONTACT_INFO } from '@/constants';
+import logoImg from "@assets/logo.png";
 
 const Footer = ({ setActivePage }: { setActivePage: (p: string) => void }) => {
   const handleLinkClick = (id: string) => {
@@ -21,7 +22,7 @@ const Footer = ({ setActivePage }: { setActivePage: (p: string) => void }) => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 lg:gap-16 mb-12 md:mb-20 lg:mb-24">
           <div className="space-y-6 md:space-y-8 sm:col-span-2 lg:col-span-1">
             <div className="flex items-center space-x-3 cursor-pointer" onClick={() => handleLinkClick('home')}>
-              <div className="bg-red-600 p-2.5 rounded-xl shrink-0"><ShieldCheck className="text-white w-7 h-7" /></div>
+             <img src={logoImg} alt="Zed-King Logo" className="w-10 h-10 md:w-12 md:h-12 object-contain" />
               <div className="flex flex-col">
                 <span className="text-2xl font-black tracking-tighter">ZED-KING</span>
                 <span className="text-[10px] font-bold text-red-600 tracking-wider">Fire and Safety</span>
@@ -67,7 +68,7 @@ const Footer = ({ setActivePage }: { setActivePage: (p: string) => void }) => {
             <h4 className="text-lg md:text-xl font-black mb-5 md:mb-8 border-b border-white/10 pb-4">Major Services</h4>
             <ul className="space-y-3 md:space-y-4 text-gray-400 text-base">
               {SERVICES.map(s => (
-                <li key={s.id} onClick={() => handleLinkClick('services')} className="hover:text-red-500 transition-colors cursor-pointer">{s.title}</li>
+                <li key={s.id} onClick={() => handleLinkClick(`services#${s.id}`)} className="hover:text-red-500 transition-colors cursor-pointer">{s.title}</li>
               ))}
             </ul>
           </div>
@@ -82,17 +83,17 @@ const Footer = ({ setActivePage }: { setActivePage: (p: string) => void }) => {
               <li className="space-y-3">
                 <div className="flex gap-3 md:gap-4 cursor-pointer" onClick={() => window.location.href = `tel:${CONTACT_INFO.phone}`}>
                   <Phone className="text-red-600 w-5 h-5 shrink-0" />
-                  <span className="text-sm md:text-base font-black text-white break-all">{CONTACT_INFO.phone}</span>
+                  <span className="text-sm md:text-base font-medium text-white break-all">{CONTACT_INFO.phone}</span>
                 </div>
                 {CONTACT_INFO.additionalPhones?.map((num, i) => (
                   <div key={i} className="flex gap-3 cursor-pointer pl-8" onClick={() => window.location.href = `tel:${num.replace(/\s+/g, '')}`}>
-                    <span className="text-sm md:text-base font-black text-white">{num}</span>
+                    <span className="text-sm md:text-base font-medium text-white break-words">{num}</span>
                   </div>
                 ))}
               </li>
               <li className="flex gap-3 md:gap-4 cursor-pointer" onClick={() => window.location.href = `mailto:${CONTACT_INFO.email}`}>
                 <Mail className="text-red-600 w-5 h-5 shrink-0" />
-                <span className="text-sm md:text-base break-all">{CONTACT_INFO.email}</span>
+                <span className="text-sm md:text-base  font-medium break-all">{CONTACT_INFO.email}</span>
               </li>
             </ul>
           </div>
@@ -102,9 +103,14 @@ const Footer = ({ setActivePage }: { setActivePage: (p: string) => void }) => {
           <p className="text-gray-500 text-xs font-bold tracking-widest uppercase text-center md:text-left">
             &copy; {new Date().getFullYear()} Zed-King Fire and Safety. All Rights Reserved.
           </p>
-          <button className="flex items-center gap-2 text-white/40 hover:text-white transition-colors uppercase text-xs font-black tracking-widest">
-            <Lock className="w-4 h-4" /> Admin Portal Login
-          </button>
+          <div className="flex items-center gap-6">
+            <button onClick={() => { setActivePage('privacy-policy'); window.scrollTo(0, 0); }} className="text-gray-400 hover:text-red-500 transition-colors text-xs font-bold tracking-widest uppercase cursor-pointer">
+              Privacy Policy
+            </button>
+            <button onClick={() => { setActivePage('terms-of-service'); window.scrollTo(0, 0); }} className="text-gray-400 hover:text-red-500 transition-colors text-xs font-bold tracking-widest uppercase cursor-pointer">
+              Terms of Service
+            </button>
+          </div>
         </div>
       </div>
     </footer>

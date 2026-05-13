@@ -1,140 +1,202 @@
-
-import React, { useState } from 'react';
-import { Phone, Mail, Clock, CheckCircle, Instagram, Youtube, Facebook } from 'lucide-react';
-import { CONTACT_INFO, SERVICES } from '@/constants';
+import React from 'react';
+import { Clock3, ExternalLink, Facebook, Instagram, Mail, MapPin, Phone, Youtube } from 'lucide-react';
+import { CONTACT_INFO } from '@/constants';
+import InquiryForm from '@/components/InquiryForm';
 
 const ContactPage = () => {
-  const [submitted, setSubmitted] = useState(false);
-
+  const phoneNumbers = [CONTACT_INFO.phone, ...(CONTACT_INFO.additionalPhones ?? [])];
   const socialLinks = [
-    { name: 'Facebook', icon: Facebook, url: CONTACT_INFO.socials.facebook, color: 'text-blue-600' },
-    { name: 'Instagram', icon: Instagram, url: CONTACT_INFO.socials.instagram, color: 'text-pink-600' },
-    { name: 'YouTube', icon: Youtube, url: CONTACT_INFO.socials.youtube, color: 'text-red-600' },
-  ];
+    { name: 'Facebook', icon: Facebook, url: CONTACT_INFO.socials.facebook, accent: 'text-blue-300' },
+    { name: 'Instagram', icon: Instagram, url: CONTACT_INFO.socials.instagram, accent: 'text-pink-300' },
+    { name: 'YouTube', icon: Youtube, url: CONTACT_INFO.socials.youtube, accent: 'text-red-300' },
+  ] as const;
+
+  const infoCards = [
+    {
+      title: 'Address',
+      icon: MapPin,
+      accent: 'text-blue-300',
+      body: [CONTACT_INFO.address],
+    },
+    {
+      title: 'Phone',
+      icon: Phone,
+      accent: 'text-emerald-300',
+      body: phoneNumbers,
+    },
+    {
+      title: 'Email',
+      icon: Mail,
+      accent: 'text-[#dc2626]',
+      body: [CONTACT_INFO.email],
+    },
+    {
+      title: 'Office Hours',
+      icon: Clock3,
+      accent: 'text-[#dc2626]',
+      body: [CONTACT_INFO.workingHours],
+    },
+  ] as const;
 
   return (
-    <section className="pt-28 pb-16 md:pt-32 md:pb-20 lg:pt-36 lg:pb-16 bg-gray-50">
+    <section className="bg-[#0a1730] pb-16 pt-28 md:pb-20 md:pt-32 lg:pb-24 lg:pt-36">
       <div className="container mx-auto px-4 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-start">
-          <div>
-            <span className="text-red-600 font-black tracking-[0.3em] uppercase text-sm mb-4 block">Inquiry Channel</span>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-blue-900 mb-6 leading-tight">Let's Secure <br />Your Facility.</h2>
-            <p className="text-base md:text-xl text-gray-500 mb-8 md:mb-12">Submit your details for a technical consultation. We respond within 4 business hours.</p>
-            
-            <div className="space-y-6 md:space-y-10">
-              <div className="space-y-4 md:space-y-6">
-                <div className="flex gap-4 md:gap-6 cursor-pointer" onClick={() => window.location.href = `tel:${CONTACT_INFO.phone}`}>
-                  <div className="bg-white p-4 md:p-5 rounded-2xl md:rounded-3xl shadow-xl shrink-0"><Phone className="text-red-600 w-6 h-6 md:w-8 md:h-8" /></div>
-                  <div>
-                    <h4 className="text-gray-400 font-black uppercase text-xs tracking-widest mb-1">Corporate Hotline</h4>
-                    <p className="text-lg md:text-2xl font-black text-blue-900 break-all">{CONTACT_INFO.phone}</p>
-                  </div>
-                </div>
-                {CONTACT_INFO.additionalPhones?.map((num, i) => (
-                  <div key={i} className="flex gap-4 cursor-pointer pl-14 md:pl-20" onClick={() => window.location.href = `tel:${num.replace(/\s+/g, '')}`}>
-                    <div>
-                      <p className="text-lg md:text-2xl font-black text-blue-900">{num}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-              <div className="flex gap-4 md:gap-6 cursor-pointer" onClick={() => window.location.href = `mailto:${CONTACT_INFO.email}`}>
-                <div className="bg-white p-4 md:p-5 rounded-2xl md:rounded-3xl shadow-xl shrink-0"><Mail className="text-red-600 w-6 h-6 md:w-8 md:h-8" /></div>
-                <div>
-                  <h4 className="text-gray-400 font-black uppercase text-xs tracking-widest mb-1">Project Inquiries</h4>
-                  <p className="text-base md:text-2xl font-black text-blue-900 break-all">{CONTACT_INFO.email}</p>
-                </div>
-              </div>
-              <div className="flex gap-4 md:gap-6">
-                <div className="bg-white p-4 md:p-5 rounded-2xl md:rounded-3xl shadow-xl shrink-0"><Clock className="text-red-600 w-6 h-6 md:w-8 md:h-8" /></div>
-                <div>
-                  <h4 className="text-gray-400 font-black uppercase text-xs tracking-widest mb-1">Office Hours</h4>
-                  <p className="text-base md:text-2xl font-black text-blue-900">{CONTACT_INFO.workingHours}</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="mt-10 md:mt-16">
-              <h4 className="text-gray-400 font-black uppercase text-xs tracking-widest mb-4 md:mb-6">Social Presence</h4>
-              <div className="flex flex-wrap gap-3 md:gap-4">
-                {socialLinks.map((social) => (
-                  <a 
-                    key={social.name}
-                    href={social.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 md:gap-3 bg-white px-4 md:px-6 py-3 md:py-4 rounded-xl md:rounded-2xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-1"
-                  >
-                    <social.icon className={`w-5 h-5 md:w-6 md:h-6 ${social.color}`} />
-                    <span className="font-black text-blue-900 text-sm md:text-base">{social.name}</span>
-                  </a>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          <div className="bg-white p-6 sm:p-10 lg:p-16 rounded-2xl lg:rounded-[3rem] shadow-2xl border border-gray-100">
-            {submitted ? (
-              <div className="text-center py-10 md:py-20">
-                <div className="bg-green-100 w-20 h-20 md:w-24 md:h-24 rounded-full flex items-center justify-center mx-auto mb-6 md:mb-8 shadow-inner"><CheckCircle className="text-green-600 w-10 h-10 md:w-12 md:h-12" /></div>
-                <h3 className="text-2xl md:text-4xl font-black text-blue-900 mb-4">Request Received!</h3>
-                <p className="text-base md:text-xl text-gray-500 leading-relaxed">A safety advisor has been assigned to your request and will call you shortly.</p>
-                <button onClick={() => setSubmitted(false)} className="mt-8 md:mt-12 text-red-600 font-black text-sm uppercase tracking-widest border-b-2 border-red-600 pb-1">Submit Another Query</button>
-              </div>
-            ) : (
-              <form onSubmit={(e) => {e.preventDefault(); setSubmitted(true);}} className="space-y-6 md:space-y-8">
-                <div className="space-y-2">
-                  <label className="text-xs font-black text-blue-900 uppercase tracking-widest">Full Name</label>
-                  <input required type="text" className="w-full bg-gray-50 border-2 border-transparent focus:border-red-600 focus:bg-white p-4 md:p-5 rounded-xl md:rounded-2xl outline-none transition-all text-base md:text-lg font-bold text-blue-900" placeholder="Your Name" />
-                </div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 md:gap-8">
-                  <div className="space-y-2">
-                    <label className="text-xs font-black text-blue-900 uppercase tracking-widest">Mobile Number</label>
-                    <input required type="tel" className="w-full bg-gray-50 border-2 border-transparent focus:border-red-600 focus:bg-white p-4 md:p-5 rounded-xl md:rounded-2xl outline-none transition-all text-base md:text-lg font-bold text-blue-900" placeholder="+91 XXXXX XXXXX" />
-                  </div>
-                  <div className="space-y-2">
-                    <label className="text-xs font-black text-blue-900 uppercase tracking-widest">Required Service</label>
-                    <select required className="w-full bg-gray-50 border-2 border-transparent focus:border-red-600 focus:bg-white p-4 md:p-5 rounded-xl md:rounded-2xl outline-none transition-all text-base md:text-lg font-bold text-blue-900 appearance-none cursor-pointer">
-                      <option value="" className="text-blue-900">Select Service</option>
-                      {SERVICES.map(s => <option key={s.id} value={s.id} className="text-blue-900">{s.title}</option>)}
-                      <option value="audit" className="text-blue-900">Safety Audit</option>
-                      <option value="noc" className="text-blue-900">Fire NOC</option>
-                    </select>
-                  </div>
-                </div>
-                <div className="space-y-2">
-                  <label className="text-xs font-black text-blue-900 uppercase tracking-widest">Site Address</label>
-                  <input required type="text" className="w-full bg-gray-50 border-2 border-transparent focus:border-red-600 focus:bg-white p-4 md:p-5 rounded-xl md:rounded-2xl outline-none transition-all text-base md:text-lg font-bold text-blue-900" placeholder="Full address of the facility" />
-                </div>
-                <div className="space-y-2">
-                  <label className="text-xs font-black text-blue-900 uppercase tracking-widest">Site Requirements</label>
-                  <textarea rows={4} className="w-full bg-gray-50 border-2 border-transparent focus:border-red-600 focus:bg-white p-4 md:p-5 rounded-xl md:rounded-2xl outline-none transition-all text-base md:text-lg font-bold text-blue-900" placeholder="Tell us about your facility..."></textarea>
-                </div>
-                <button type="submit" className="w-full bg-red-600 hover:bg-red-700 text-white py-4 md:py-6 rounded-2xl md:rounded-3xl font-black text-lg md:text-2xl shadow-2xl hover:shadow-red-600/30 transition-all transform active:scale-95">
-                  Confirm Inquiry
-                </button>
-              </form>
-            )}
-          </div>
+        <div className="mb-10 md:mb-12">
+          <span className="mb-3 block text-xs font-black uppercase tracking-[0.3em] text-red-300 transition-colors duration-300 hover:text-red-200">
+            Contact Us
+          </span>
+          <h1 className="max-w-3xl text-3xl font-black leading-tight text-white transition-all duration-300 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-white hover:via-[#dc2626] hover:to-white sm:text-4xl md:text-5xl">
+            Reach Our Fire & Safety Team
+          </h1>
+          <p className="mt-4 max-w-2xl text-sm leading-relaxed text-slate-300 sm:text-base md:text-lg">
+            Same contact details, cleaner layout. Share your enquiry and we will get back to you promptly.
+          </p>
         </div>
 
-        {/* Google Maps Embed */}
-        <div className="mt-10 lg:mt-16 rounded-2xl lg:rounded-[2rem] overflow-hidden shadow-2xl border border-gray-100">
-          <div className="bg-blue-900 px-6 py-4 flex items-center gap-3">
-            <div className="w-2.5 h-2.5 rounded-full bg-red-500"></div>
-            <p className="text-white font-black text-sm uppercase tracking-widest">Our Location — Kaithal, Haryana</p>
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-4">
+          {infoCards.map((card) => (
+            <div
+              key={card.title}
+              className="group rounded-2xl border border-white/10 bg-[#162541] p-5 shadow-[0_18px_45px_rgba(2,6,23,0.25)] transition-all duration-300 hover:-translate-y-2 hover:border-[#dc2626]/30 hover:shadow-[0_25px_60px_rgba(220,38,38,0.15)] cursor-pointer"
+              onClick={() => {
+                if (card.title === 'Address') {
+                  window.open('https://maps.google.com/?q=Zed%20King%20Institute%20Fire%20and%20Safety%20Kaithal', '_blank');
+                }
+              }}
+            >
+              <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br from-white/10 to-white/5 shadow-inner transition-all duration-300 group-hover:scale-110 group-hover:shadow-[0_0_20px_rgba(220,38,38,0.3)]">
+                <card.icon className={`h-6 w-6 ${card.accent} transition-all duration-300 group-hover:scale-110 group-hover:drop-shadow-[0_0_8px_currentColor]`} />
+              </div>
+              <p className="text-[11px] font-black uppercase tracking-[0.18em] text-[#dc2626] transition-colors duration-300 group-hover:text-[#b91c1c]">
+                {card.title}
+              </p>
+              <div className="mt-2 space-y-1.5">
+                {card.title === 'Phone'
+                  ? card.body.map((phone) => (
+                      <a
+                        key={phone}
+                        href={`tel:${phone.replace(/\s|-/g, '')}`}
+                        className="block text-sm font-semibold leading-relaxed text-slate-100 transition-colors duration-300 hover:text-emerald-300 sm:text-base"
+                      >
+                        {phone}
+                      </a>
+                    ))
+                  : card.title === 'Email'
+                    ? card.body.map((email) => (
+                        <a
+                          key={email}
+                          href={`mailto:${email}`}
+                          className="block text-sm font-semibold leading-relaxed text-slate-100 transition-colors duration-300 break-all hover:text-[#dc2626] sm:text-base"
+                        >
+                          {email}
+                        </a>
+                      ))
+                    : card.body.map((line) => (
+                        <p key={line} className="text-sm font-semibold leading-relaxed text-slate-100 transition-colors duration-300 group-hover:text-white sm:text-base">
+                          {line}
+                        </p>
+                      ))}
+              </div>
+              {card.title === 'Address' && (
+                <div className="mt-3 inline-flex items-center gap-1.5 text-sm font-black text-[#dc2626]">
+                  Open in Maps <ExternalLink className="h-4 w-4" />
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-8 grid grid-cols-1 gap-5 lg:grid-cols-[1.05fr_1fr]">
+          <InquiryForm dark source="Contact page enquiry form" />
+
+          <div className="space-y-5">
+            <div className="group overflow-hidden rounded-2xl border border-white/10 bg-[#162541] shadow-[0_18px_45px_rgba(2,6,23,0.25)] transition-all duration-300 hover:border-[#dc2626]/30 hover:shadow-[0_25px_60px_rgba(220,38,38,0.12)]">
+              <div className="overflow-hidden">
+                <iframe
+                  title="Zed-King Fire and Safety Location"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3498.347011470906!2d76.42000018623047!3d29.79840852819153!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3911e1a738dd0fe1%3A0x375f8e3f8aa269fc!2sZed%20King%20Institute%20Fire%20and%20Safety!5e1!3m2!1sen!2sin!4v1777531237069!5m2!1sen!2sin"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0, display: 'block', transition: 'transform 0.5s ease' }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="h-[320px] w-full transition-transform duration-500 group-hover:scale-105 md:h-[360px]"
+                />
+              </div>
+              <div className="border-t border-white/8 px-5 py-4">
+                <div className="flex items-start gap-3">
+                  <div className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[#dc2626]/10 transition-all duration-300 group-hover:bg-[#dc2626]/20">
+                    <MapPin className="h-4 w-4 text-[#dc2626] transition-transform duration-300 group-hover:scale-110" />
+                  </div>
+                  <div>
+                    <p className="text-sm font-semibold leading-relaxed text-slate-100">
+                      {CONTACT_INFO.address}
+                    </p>
+                    <a
+                      href="https://maps.google.com/?q=Zed%20King%20Institute%20Fire%20and%20Safety%20Kaithal"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group/maps mt-2 inline-flex items-center gap-2 text-sm font-black text-[#dc2626] transition-all hover:text-[#b91c1c]"
+                    >
+                      View on Google Maps <ExternalLink className="h-4 w-4 transition-transform duration-300 group-hover/maps:translate-x-0.5 group-hover/maps:-translate-y-0.5" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="group/timing rounded-2xl border border-white/10 bg-[#162541] p-5 shadow-[0_18px_45px_rgba(2,6,23,0.25)] transition-all duration-300 hover:border-[#dc2626]/30 hover:shadow-[0_25px_60px_rgba(220,38,38,0.12)]">
+              <div className="flex items-center gap-3">
+                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-[#dc2626]/20 to-[#dc2626]/5 shadow-inner transition-all duration-300 group-hover/timing:scale-110 group-hover/timing:shadow-[0_0_15px_rgba(220,38,38,0.25)]">
+                  <Clock3 className="h-4 w-4 text-[#dc2626] transition-transform duration-300 group-hover/timing:rotate-12" />
+                </div>
+                <h3 className="text-2xl font-black text-white">Office Timings</h3>
+              </div>
+
+              <div className="mt-6 space-y-4">
+                <div className="flex items-center justify-between gap-4 border-b border-white/8 pb-3 transition-colors duration-300 hover:border-[#dc2626]/20">
+                  <p className="text-sm font-semibold text-slate-300">Monday - Saturday</p>
+                  <div className="flex items-center gap-3">
+                    <span className="text-sm font-black text-white">{CONTACT_INFO.workingHours}</span>
+                    <span className="rounded-full bg-emerald-500/15 px-2.5 py-1 text-[10px] font-black uppercase tracking-[0.16em] text-emerald-300 transition-all duration-300 hover:scale-105 hover:bg-emerald-500/25">
+                      Open
+                    </span>
+                  </div>
+                </div>
+                <div className="flex items-center justify-between gap-4 border-b border-white/8 pb-3 transition-colors duration-300 hover:border-[#dc2626]/20">
+                  <p className="text-sm font-semibold text-slate-300">Emergency Helpline</p>
+                  <a href={`tel:${CONTACT_INFO.emergency.replace(/\s|-/g, '')}`} className="text-sm font-black text-white hover:text-emerald-300 transition-colors">{CONTACT_INFO.emergency}</a>
+                </div>
+                <div className="flex items-center justify-between gap-4 transition-colors duration-300">
+                  <p className="text-sm font-semibold text-slate-300">Email Support</p>
+                  <a href={`mailto:${CONTACT_INFO.email}`} className="text-sm font-black text-white break-all text-right hover:text-[#dc2626] transition-colors">{CONTACT_INFO.email}</a>
+                </div>
+              </div>
+
+              <div className="mt-6 border-t border-white/8 pt-5">
+                <p className="mb-3 text-xs font-black uppercase tracking-[0.16em] text-slate-400">
+                  Social Presence
+                </p>
+                <div className="flex flex-wrap gap-3">
+                  {socialLinks.map((social) => (
+                    <a
+                      key={social.name}
+                      href={social.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group/social inline-flex items-center gap-2 rounded-xl border border-white/10 bg-white/6 px-4 py-3 text-sm font-black text-white transition-all duration-300 hover:-translate-y-1 hover:border-white/20 hover:bg-white/10 hover:shadow-[0_12px_30px_rgba(0,0,0,0.3)]"
+                    >
+                      <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-white/5 transition-all duration-300 group-hover/social:scale-110 group-hover/social:bg-white/10">
+                        <social.icon className={`h-4 w-4 ${social.accent} transition-transform duration-300 group-hover/social:scale-110`} />
+                      </div>
+                      <span className="transition-colors duration-300 group-hover/social:text-white">{social.name}</span>
+                    </a>
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
-          <iframe
-            title="Zed-King Fire and Safety Location"
-            src="https://maps.google.com/maps?q=Karnal+Rd,+near+New+Bus+Stand,+Friends+Colony,+Kaithal,+Haryana+136027&output=embed&z=15"
-            width="100%"
-            height="380"
-            style={{ border: 0, display: 'block' }}
-            allowFullScreen
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            className="w-full h-64 sm:h-80 md:h-96"
-          ></iframe>
         </div>
       </div>
     </section>

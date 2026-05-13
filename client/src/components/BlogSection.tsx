@@ -4,13 +4,18 @@ import { Calendar, ArrowRight } from 'lucide-react';
 import { BLOG_POSTS } from '@/constants';
 import SectionTitle from './SectionTitle';
 
-const BlogSection = () => (
+const BlogSection = ({ onReadArticle }: { onReadArticle: (slug: string) => void }) => (
   <section className="py-16 md:py-24 lg:py-32 bg-gray-50">
     <div className="container mx-auto px-4 lg:px-8">
       <SectionTitle title="Fire Safety Insights" subtitle="Stay updated with the latest safety protocols and equipment guides." />
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-10">
         {BLOG_POSTS.map(post => (
-          <div key={post.id} className="bg-white rounded-2xl md:rounded-[2rem] overflow-hidden shadow-lg border border-gray-100 hover:-translate-y-2 transition-transform duration-300">
+          <button
+            key={post.id}
+            type="button"
+            onClick={() => onReadArticle(post.slug)}
+            className="text-left bg-white rounded-2xl md:rounded-[2rem] overflow-hidden shadow-lg border border-gray-100 hover:-translate-y-2 transition-transform duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-red-600/50"
+          >
             <div className="h-40 md:h-48 bg-gray-200 overflow-hidden">
                <img src={post.image} alt={post.title} className="w-full h-full object-cover" />
             </div>
@@ -20,9 +25,11 @@ const BlogSection = () => (
               </div>
               <h3 className="text-lg md:text-2xl font-black text-blue-900 mb-3 md:mb-4 line-clamp-2">{post.title}</h3>
               <p className="text-gray-600 mb-4 md:mb-6 leading-relaxed text-sm md:text-base">{post.excerpt}</p>
-              <button className="text-red-600 font-black uppercase text-xs md:text-sm flex items-center hover:gap-2 transition-all">Read Article <ArrowRight className="ml-2 w-4 h-4" /></button>
+              <div className="text-red-600 font-black uppercase text-xs md:text-sm flex items-center hover:gap-2 transition-all">
+                Read Article <ArrowRight className="ml-2 w-4 h-4" />
+              </div>
             </div>
-          </div>
+          </button>
         ))}
       </div>
     </div>

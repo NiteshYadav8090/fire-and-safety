@@ -1,0 +1,6 @@
+
+> rest-express@1.0.0 dev
+> cross-env NODE_ENV=development tsx server/index.ts
+
+9:54:25 PM [express] serving on port 5001
+[2m9:59:56 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/App.tsx, /src/components/Footer.tsx, /src/pages/ServiceInfo.tsx, /src/components/HomeInquirySection.tsx, /src/pages/Contact.tsx, /src/pages/BlogPost.tsx, /src/components/Navbar.tsx, /src/pages/GalleryCategory.tsx, /src/pages/TermsOfService.tsx, /src/pages/PrivacyPolicy.tsx, /src/pages/Services.tsx, /src/pages/Gallery.tsx, /src/pages/Home.tsx, /src/components/InquiryForm.tsx, /src/components/BlogSection.tsx, /src/components/StudentReviewsSection.tsx, /src/index.css[22m
